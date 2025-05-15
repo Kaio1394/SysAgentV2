@@ -1,8 +1,6 @@
-﻿using SysAgentV2.DTOs;
-
-namespace SysAgentV2.Models
+﻿namespace SysAgentV2.Models
 {
-    public class CollectMetrics : DtoBase
+    public class CollectMetrics : ModelBase
     {
         public string JsonResult { get; set; }
     }
