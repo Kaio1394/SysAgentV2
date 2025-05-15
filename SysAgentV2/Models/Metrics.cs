@@ -1,4 +1,4 @@
-﻿using SysAgentV2.DTOs;
+﻿using SysAgentV2.Models;
 
 namespace SysAgentV2.Models
 {
