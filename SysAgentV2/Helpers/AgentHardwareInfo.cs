@@ -7,6 +7,10 @@ namespace SysAgentV2.Helpers
 {
     public class AgentHardwareInfo : IAgentHardwareInfo
     {
+        public int GetQtyCore()
+        {
+            return Environment.ProcessorCount;
+        }
         public uint GetCpuFrequency()
         {
             try
@@ -21,6 +25,24 @@ namespace SysAgentV2.Helpers
             {
 
                 throw;
+            }
+        }
+        public string GetProcessorName()
+        {
+            string cpuName = "Desconhecido";
+            try
+            {
+                using var searcher = new ManagementObjectSearcher("select Name from Win32_Processor");
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    cpuName = obj["Name"]?.ToString() ?? "Desconhecido";
+                    break;
+                }
+                return cpuName.Trim();
+            }
+            catch
+            {
+                return "Desconhecido";
             }
         }
 
@@ -44,28 +66,63 @@ namespace SysAgentV2.Helpers
             }
         }
 
-        public string GetProcessorName()
+        public Models.Cpu GetInfoCpu()
         {
-            string cpuName = "Desconhecido";
-            try
+            return new Models.Cpu()
             {
-                using var searcher = new ManagementObjectSearcher("select Name from Win32_Processor");
-                foreach (ManagementObject obj in searcher.Get())
-                {
-                    cpuName = obj["Name"]?.ToString() ?? "Desconhecido";
-                    break;
-                }
-                return cpuName.Trim();
-            }
-            catch
-            {
-                return "Desconhecido";
-            }
+                NameProcessor = GetProcessorName(),
+                Core = GetQtyCore(),
+                Frequency = GetCpuFrequency(),
+                UsagePercent = GetCpuUsage(),
+            };
         }
 
-        public int GetQtyCore()
+        public List<Models.Disk> GetInfoDisk()
         {
-            return Environment.ProcessorCount;
+            List<Models.Disk> list = new List<Models.Disk>();
+
+            foreach (DriveInfo drive in DriveInfo.GetDrives())
+            {
+                if (drive.IsReady)
+                {
+                    long totalSpace = drive.TotalSize / (1024 * 1024 * 1024);
+                    long freeSpace = drive.TotalFreeSpace / (1024 * 1024 * 1024);
+                    long usedSpace = totalSpace - freeSpace;
+
+                    list.Add(new Models.Disk()
+                    {
+                        Name = drive.Name,
+                        Info = new Models.DictioaryInfoDisk()
+                        {
+                            TotalSpace = totalSpace,
+                            UsedSpace = usedSpace,
+                            FreeSpace = freeSpace,
+                        }
+                    });
+                }
+            }
+            return list;
         }
+
+        public Models.Memory GetInfoMemory()
+        {
+            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
+            Models.Memory? memory = new Models.Memory();
+            foreach (var obj in searcher.Get())
+            {
+                double totalVisibleMemory = Convert.ToDouble(obj["TotalVisibleMemorySize"]) / 1024; 
+                double freePhysicalMemory = Convert.ToDouble(obj["FreePhysicalMemory"]) / 1024;   
+                double usedMemory = totalVisibleMemory - freePhysicalMemory;
+
+                memory.Total = $"{totalVisibleMemory:F2} MB";
+                memory.Free = $"{freePhysicalMemory:F2} MB";
+                memory.Usage = $"{usedMemory:F2} MB";
+            }
+            return memory;
+        }
+
+        
+
+        
     }
 }

@@ -2,8 +2,14 @@
 {
     public class Disk
     {
-        public double TotalSpace { get; set; }
-        public double UsedSpace { get; set; }
-        public double FreeSpace { get; set; }
+        public string Name { get; set; }
+        public DictioaryInfoDisk? Info {get; set;}
+    }
+
+    public class DictioaryInfoDisk
+    {
+        public long TotalSpace { get; set; }
+        public long UsedSpace { get; set; }
+        public long FreeSpace { get; set; }
     }
 }

@@ -6,5 +6,8 @@
         uint GetCpuFrequency();
         float GetCpuUsage();
         int GetQtyCore();
+        List<Models.Disk> GetInfoDisk();
+        Models.Memory GetInfoMemory();
+        Models.Cpu GetInfoCpu();
     }
 }

@@ -6,6 +6,6 @@ namespace SysAgentV2.Models
     {
         public Memory Memory { get; set; }
         public Cpu Cpu { get; set; }
-        public Disk Disk { get; set; }
+        public List<Disk> ListDisk { get; set; }
     }
 }

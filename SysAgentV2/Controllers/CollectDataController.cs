@@ -16,19 +16,31 @@ namespace SysAgentV2.Controllers
             _helper = helper;
         }
 
-        [HttpGet]
+        [HttpGet("info/cpu")]
         public async Task<IActionResult> GetCpuInfo()
         {
-            var cpuUsage = await _helper.GetCpuUsageAsync();
-            var qtyCores = await _helper.GetQtyCoreAsync();
-            var processor = await _helper.GetNameProcessorAsync();
-            var frequency = await _helper.GetCpuFrequencyAsync();
-            return Ok(new Cpu{ 
-                NameProcessor = processor,
-                Frequency = frequency,
-                UsagePercent = Convert.ToDouble(cpuUsage.ToString("F2")),
-                Core = qtyCores
-            });
+            var cpuInfo = await _helper.GetInfoCpuAsync();
+            return Ok(cpuInfo);
+        }
+
+        [HttpGet("info/memory")]
+        public async Task<IActionResult> GetMemoryInfo()
+        {
+            var memoryInfo = await _helper.GetMemoryInfoAsync();
+            return Ok(memoryInfo);
+        }
+
+        [HttpGet("info/disk")]
+        public async Task<IActionResult> GetDiskInfo()
+        {
+            var diskInfo = await _helper.GetInfoDiskAsync();
+            return Ok(diskInfo);
+        }
+        [HttpGet("info/hardware")]
+        public async Task<IActionResult> GetHardwareInfo()
+        {
+            var diskInfo = await _helper.GetHardwareInfoAsync();
+            return Ok(diskInfo);
         }
     }
 }

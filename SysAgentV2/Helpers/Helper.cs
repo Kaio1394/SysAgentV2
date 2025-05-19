@@ -13,37 +13,51 @@ namespace SysAgentV2.Helpers
         {
             _hardwareInfo = hardwareInfo;
         }
-        public Task<float> GetCpuUsageAsync()
+
+        public Task<Models.Memory> GetMemoryInfoAsync()
         {
             return Task.Run(() =>
             {
-                var usage =  _hardwareInfo.GetCpuUsage();
-                return usage;
+                var memoryInfo = _hardwareInfo.GetInfoMemory();
+                return memoryInfo;
             });
         }
-        public Task<uint> GetCpuFrequencyAsync()
+
+        public Task<List<Models.Disk>> GetInfoDiskAsync()
         {
             return Task.Run(() =>
             {
-                var freq = _hardwareInfo.GetCpuFrequency();
-                return freq;
+                var dictInfoDisk = _hardwareInfo.GetInfoDisk();
+                return dictInfoDisk;
             });
         }
-        public Task<int> GetQtyCoreAsync()
+        public Task<Metrics> GetHardwareInfoAsync()
         {
-            return Task.Run(() =>
-            {
-                var qtyCore = _hardwareInfo.GetQtyCore();
-                return qtyCore;
+            return Task.Run(() => {
+                var dictInfoDisk = _hardwareInfo.GetInfoDisk();
+
+                var memoryInfo = _hardwareInfo.GetInfoMemory();
+
+                var cpuInfo = _hardwareInfo.GetInfoCpu();
+
+                var metrics = new Metrics()
+                {
+                    Cpu = cpuInfo,
+                    Memory = memoryInfo,
+                    ListDisk = dictInfoDisk,
+                };
+
+                return metrics;
             });
         }
-        public Task<string> GetNameProcessorAsync()
+
+        public Task<Cpu> GetInfoCpuAsync()
         {
             return Task.Run(() =>
             {
-                var nameProcessor = _hardwareInfo.GetProcessorName();
-                return nameProcessor;
-            });  
+                var cpuInfo = _hardwareInfo.GetInfoCpu();
+                return cpuInfo;
+            });
         }
     }
 }

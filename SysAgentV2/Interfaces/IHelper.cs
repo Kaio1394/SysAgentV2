@@ -1,10 +1,12 @@
-﻿namespace SysAgentV2.Interfaces
+﻿using SysAgentV2.Models;
+
+namespace SysAgentV2.Interfaces
 {
     public interface IHelper
     {
-        Task<float> GetCpuUsageAsync();
-        Task<int> GetQtyCoreAsync();
-        Task<string> GetNameProcessorAsync();
-        Task<uint> GetCpuFrequencyAsync();
+        Task<Models.Memory> GetMemoryInfoAsync();
+        Task<List<Models.Disk>> GetInfoDiskAsync();
+        Task<Models.Cpu> GetInfoCpuAsync();
+        Task<Metrics> GetHardwareInfoAsync();
     }
 }
