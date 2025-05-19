@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using SysAgentV2.Data;
 using SysAgentV2.Helpers;
 using SysAgentV2.Interfaces;
+using SysAgentV2.Models;
 using SysAgentV2.Repository;
 using SysAgentV2.Repository.Interfaces;
 using SysAgentV2.Services;
@@ -19,9 +20,13 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ICollectMetricsService, CollectMetricsService>();
 builder.Services.AddScoped<ICollectMetricsRepository, CollectMetricsRepository>();
+
+builder.Services.AddScoped<IAgentStatusRepository, AgentStatusRepository>();
+builder.Services.AddScoped<IAgentStatusService, AgentStatusService>();
+
 builder.Services.AddScoped<IHelper, Helper>();
 builder.Services.AddScoped<IAgentHardwareInfo, AgentHardwareInfo>();
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlite("Data Source=SysAgent.db"));
+builder.Services.AddDbContext<SysDbContext>(opt => opt.UseSqlite("Data Source=SysAgent.db"));
 
 var app = builder.Build();
 
