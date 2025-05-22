@@ -42,17 +42,5 @@ namespace SysAgentV2.Controllers
             var diskInfo = await _helper.GetHardwareInfoAsync();
             return Ok(diskInfo);
         }
-        [HttpPost("start")]
-        public async Task<IActionResult> StarCollectData()
-        {
-            var diskInfo = await _helper.GetHardwareInfoAsync();
-            return Ok(diskInfo);
-        }
-        [HttpPost("stop")]
-        public async Task<IActionResult> StopCollectData()
-        {
-            var diskInfo = await _helper.GetHardwareInfoAsync();
-            return Ok(diskInfo);
-        }
     }
 }

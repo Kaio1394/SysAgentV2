@@ -18,15 +18,22 @@ namespace SysAgentV2.Services
             _mapper = mapper;
         }
 
-        public async Task<AgentStatusDto?> GetStatusAsync()
+        public async Task<AgentDto?> GetStatusAsync()
         {
             var agentModel = await _repository.GetByIdAsync();
-            return _mapper.Map<AgentStatusDto>(agentModel);
+            return _mapper.Map<AgentDto>(agentModel);
         }
 
-        public async Task<bool> UpdateStatusAsync(AgentStatus agent)
+        public async Task<bool> UpdateStatusAsync(string status)
         {
-            _repository.Update(agent);
+            var agentModel = await _repository.GetByIdAsync();
+
+            if (agentModel == null)
+                return false;
+
+            agentModel.Status = status;
+
+            _repository.Update(agentModel);
             return await _repository.SaveChanges();
         }
     }

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysAgentV2", "SysAgentV2\SysAgentV2.csproj", "{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SysAgentV2", "SysAgentV2\SysAgentV2.csproj", "{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysAgentUnitTest", "SysAgentUnitTest\SysAgentUnitTest.csproj", "{3184963C-1FFC-4B01-A31F-2A9D01019994}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SysAgentUnitTest", "SysAgentUnitTest\SysAgentUnitTest.csproj", "{3184963C-1FFC-4B01-A31F-2A9D01019994}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

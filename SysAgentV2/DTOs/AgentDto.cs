@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SysAgentV2.DTOs
 {
-    public class AgentStatusDto
+    public class AgentDto
     {
         public string Status { get; set; } = "STOPPED";
 

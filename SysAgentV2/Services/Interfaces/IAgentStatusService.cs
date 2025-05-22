@@ -5,7 +5,7 @@ namespace SysAgentV2.Services.Interfaces
 {
     public interface IAgentStatusService
     {
-        Task<AgentStatusDto?> GetStatusAsync();
-        Task<bool> UpdateStatusAsync(AgentStatus agent);
+        Task<AgentDto?> GetStatusAsync();
+        Task<bool> UpdateStatusAsync(string status);
     }
 }
