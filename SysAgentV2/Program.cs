@@ -28,6 +28,7 @@ builder.Services.AddScoped<IHelper, Helper>();
 builder.Services.AddScoped<IAgentHardwareInfo, AgentHardwareInfo>();
 builder.Services.AddDbContext<SysDbContext>(opt => opt.UseSqlite("Data Source=SysAgent.db"));
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

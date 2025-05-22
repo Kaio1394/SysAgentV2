@@ -1,10 +1,11 @@
-﻿using SysAgentV2.Models;
+﻿using SysAgentV2.DTOs;
+using SysAgentV2.Models;
 
 namespace SysAgentV2.Services.Interfaces
 {
     public interface IAgentStatusService
     {
-        Task<AgentStatus?> GetStatusAsync();
+        Task<AgentStatusDto?> GetStatusAsync();
         Task<bool> UpdateStatusAsync(AgentStatus agent);
     }
 }

@@ -267,3 +267,5 @@ C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\bin\Debug\net7.0\runtimes\win\
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net7.0\SysAgentV2.RazorAssemblyInfo.cache
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net7.0\SysAgentV2.RazorAssemblyInfo.cs
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
