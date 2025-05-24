@@ -17,7 +17,7 @@ namespace SysAgentV2.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.20");
 
-            modelBuilder.Entity("SysAgentV2.Models.AgentStatus", b =>
+            modelBuilder.Entity("SysAgentV2.Models.AgentExecutionStatus", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("INTEGER");
@@ -28,7 +28,6 @@ namespace SysAgentV2.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasMaxLength(100)
                         .HasColumnType("TEXT")
                         .HasColumnName("status");
 
@@ -40,9 +39,107 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 19, 16, 52, 28, 363, DateTimeKind.Utc).AddTicks(4905),
+                            CreatedAt = new DateTime(2025, 5, 24, 14, 33, 58, 872, DateTimeKind.Utc).AddTicks(904),
                             Status = "STOPPED"
                         });
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.AgentHealthStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("edited_at");
+
+                    b.Property<string>("HealthStatus")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("health_status");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_status_health");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2025, 5, 24, 14, 33, 58, 872, DateTimeKind.Utc).AddTicks(5016),
+                            HealthStatus = "DISABLED"
+                        });
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.AgentScripFile", b =>
+                {
+                    b.Property<string>("Uuid")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("file_path");
+
+                    b.Property<bool>("IsChained")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("is_chained");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("language");
+
+                    b.Property<string>("Output")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("output");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Uuid");
+
+                    b.ToTable("t_repo_scripts_file");
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.AgentScriptCmd", b =>
+                {
+                    b.Property<string>("Uuid")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<bool>("IsChained")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("is_chained");
+
+                    b.Property<string>("Output")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("output");
+
+                    b.Property<string>("Script")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("script");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Uuid");
+
+                    b.ToTable("t_repo_scripts_cmd");
                 });
 
             modelBuilder.Entity("SysAgentV2.Models.CollectMetrics", b =>

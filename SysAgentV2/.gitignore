@@ -1,3 +1,5 @@
 .vs/
+.vs/*
 *.db-shm
 *.db-wal
+/Logs

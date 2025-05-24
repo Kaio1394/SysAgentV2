@@ -1,6 +1,6 @@
 using Moq;
 using SysAgentV2.Helpers;
-using SysAgentV2.Interfaces;
+using SysAgentV2.Helpers.Interfaces;
 
 namespace SysAgentUnitTest
 {

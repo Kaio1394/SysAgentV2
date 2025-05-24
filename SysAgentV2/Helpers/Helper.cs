@@ -1,5 +1,5 @@
 ﻿using Hardware.Info;
-using SysAgentV2.Interfaces;
+using SysAgentV2.Helpers.Interfaces;
 using SysAgentV2.Models;
 using System.Diagnostics;
 using System.Management;

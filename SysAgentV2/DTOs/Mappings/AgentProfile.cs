@@ -7,7 +7,7 @@ namespace SysAgentV2.DTOs.Mappings
     {
         public AgentProfile()
         {
-            CreateMap<AgentStatus, AgentDto>();
+            CreateMap<AgentExecutionStatus, AgentExecutionStatusDto>();
         }
     }
 }

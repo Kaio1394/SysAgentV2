@@ -1,5 +1,5 @@
 ﻿using Hardware.Info;
-using SysAgentV2.Interfaces;
+using SysAgentV2.Helpers.Interfaces;
 using System.Diagnostics;
 using System.Management;
 
@@ -120,9 +120,5 @@ namespace SysAgentV2.Helpers
             }
             return memory;
         }
-
-        
-
-        
     }
 }

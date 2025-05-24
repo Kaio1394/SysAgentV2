@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "siFMUaSgJ+tLJno4wEb40KvtP8+JOg82L3lM1eu4cQE=",
+  "Source": "SysAgentV2",
+  "BasePath": "_content/SysAgentV2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
