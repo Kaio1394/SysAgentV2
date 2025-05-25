@@ -220,6 +220,7 @@ namespace SysAgentV2.Helpers
                 {
                     service.Stop();
                     service.WaitForStatus(ServiceControllerStatus.Stopped, TimeSpan.FromSeconds(60));
+
                     return true;
                 }
             }
