@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SysAgentV2.Helpers.Interfaces;
 using SysAgentV2.Models;
+using SysAgentV2.Models.response;
 using System.Diagnostics;
 
 namespace SysAgentV2.Controllers
@@ -41,6 +42,33 @@ namespace SysAgentV2.Controllers
         {
             var diskInfo = await _helper.GetHardwareInfoAsync();
             return Ok(diskInfo);
+        }
+
+        [HttpGet("list/process")]
+        public async Task<IActionResult> GetListProcessInfo()
+        {
+            var listProcess = await _helper.GetInfoProcessAsync();
+            return Ok(listProcess);
+        }
+
+        [HttpGet("list/services")]
+        public async Task<IActionResult> GetListServicesInfo()
+        {
+            var listServices = await _helper.GetListServicesAsync();
+            return Ok(listServices);
+        }
+
+        [HttpGet("process/{pid}")]
+        public async Task<IActionResult> ProcessInfo([FromRoute] int pid)
+        {
+            var process = await _helper.GetProcessByPidAsync(pid);
+
+            if(process == null)
+                return NotFound(new InfoError
+                {
+                    Error = "Process not found."
+                });
+            return Ok(process);
         }
     }
 }

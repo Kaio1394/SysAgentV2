@@ -9,5 +9,12 @@
         List<Models.Disk> GetInfoDisk();
         Models.Memory GetInfoMemory();
         Models.Cpu GetInfoCpu();
+        List<Models.Process> GetListProcess();
+        Models.Process GetProcessByPid(int pid);
+        (bool, Models.Process) KillProcessByPid(int pid);
+        List<Models.Service> GetListServices();
+        bool StopServiceByDisplayName(string displayName);
+        bool StopServiceByServiceName(string serviceName);
+        bool StartServiceByDisplayName(string displayName);
     }
 }

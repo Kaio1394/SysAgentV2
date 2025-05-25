@@ -2,6 +2,7 @@
 using SysAgentV2.Helpers.Interfaces;
 using System.Diagnostics;
 using System.Management;
+using System.ServiceProcess;
 
 namespace SysAgentV2.Helpers
 {
@@ -119,6 +120,158 @@ namespace SysAgentV2.Helpers
                 memory.Usage = $"{usedMemory:F2} MB";
             }
             return memory;
+        }
+
+        public List<Models.Process> GetListProcess()
+        {
+            var listProcess = new List<Models.Process>();
+
+            Process[] processes = Process.GetProcesses();
+
+            foreach (Process process in processes)
+            {
+                try
+                {
+                    long memoryMB = process.WorkingSet64 / (1024 * 1024);
+
+                    if (memoryMB > 0)
+                        listProcess.Add(new Models.Process
+                        {
+                            Id = process.Id,
+                            Name = process.ProcessName,
+                            UsageMemoryAux = memoryMB,
+                            UsageMemory = $"{memoryMB} MB"
+                        });
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return listProcess.OrderByDescending(x => x.UsageMemoryAux).ToList();
+        }
+
+        public Models.Process GetProcessByPid(int pid)
+        {
+            Process[] processes = Process.GetProcesses();
+
+            try
+            {
+                foreach (Process process in processes)
+                {
+                    if (process.Id == pid)
+                    {
+                        long memoryMB = process.WorkingSet64 / (1024 * 1024);
+
+                        var processModel = new Models.Process
+                        {
+                            Id = process.Id,
+                            Name = process.ProcessName,
+                            UsageMemoryAux = memoryMB,
+                            UsageMemory = $"{memoryMB} MB"
+                        };
+                        return processModel;
+                    }                 
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                throw;
+            } 
+        }
+        public List<Models.Service> GetListServices()
+        {
+            var services = ServiceController.GetServices();
+            List<Models.Service> listServices = new List<Models.Service>();
+            foreach (var service in services)
+            {
+                listServices.Add(new Models.Service
+                {
+                    DisplayName = service.DisplayName,
+                     ServiceName = service.ServiceName,
+                     Status = service.Status.ToString(),
+                });
+            }
+            return listServices;
+        }
+
+        public bool StartServiceByDisplayName(string displayName)
+        {
+            var services = ServiceController.GetServices();
+            foreach (var service in services)
+            {
+                if (service.DisplayName == displayName)
+                {
+                    service.Start();
+                    service.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(60));
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool StopServiceByDisplayName(string displayName)
+        {
+            var services = ServiceController.GetServices();
+            foreach (var service in services)
+            {
+                if (service.DisplayName == displayName)
+                {
+                    service.Stop();
+                    service.WaitForStatus(ServiceControllerStatus.Stopped, TimeSpan.FromSeconds(60));
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool StopServiceByServiceName(string serviceName)
+        {
+            var services = ServiceController.GetServices();
+            foreach (var service in services)
+            {
+                if (service.ServiceName == serviceName)
+                {
+                    service.Stop();
+                    service.WaitForStatus(ServiceControllerStatus.Stopped, TimeSpan.FromSeconds(60));
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public (bool, Models.Process) KillProcessByPid(int pid)
+        {
+            Process[] processes = Process.GetProcesses();
+            try
+            {
+                foreach (Process process in processes)
+                {
+                    if (process.Id == pid)
+                    {
+                        long memoryMB = process.WorkingSet64 / (1024 * 1024);
+
+                        var processModel = new Models.Process
+                        {
+                            Id = process.Id,
+                            Name = process.ProcessName,
+                            UsageMemoryAux = memoryMB,
+                            UsageMemory = $"{memoryMB} MB"
+                        };
+
+                        process.Kill();
+                        process.WaitForExitAsync();
+
+                        return (true, processModel);
+                    }
+                }
+                return (false, null);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

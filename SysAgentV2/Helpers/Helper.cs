@@ -59,5 +59,47 @@ namespace SysAgentV2.Helpers
                 return cpuInfo;
             });
         }
+        public Task<List<Models.Process>> GetInfoProcessAsync()
+        {
+            return Task.Run(() =>
+            {
+                var listProcess = _hardwareInfo.GetListProcess();
+                return listProcess;
+            });
+        }
+
+        public Task<Models.Process> GetProcessByPidAsync(int pid)
+        {
+            return Task.Run(() =>
+            {
+                var process = _hardwareInfo.GetProcessByPid(pid);
+                return process;
+            });
+        }
+
+        public Task<List<Service>> GetListServicesAsync()
+        {
+            return Task.Run(() =>
+            {
+                var services = _hardwareInfo.GetListServices();
+                return services;
+            });
+        }
+
+        public Task<bool> StopServiceByDisplayNameAsync(string displayName)
+        {
+            return Task.Run(() =>
+            {
+                return _hardwareInfo.StopServiceByDisplayName(displayName);
+            });
+        }
+
+        public Task<bool> StartServiceByDisplayNameAsync(string displayName)
+        {
+            return Task.Run(() =>
+            {
+                return _hardwareInfo.StartServiceByDisplayName(displayName);
+            });
+        }
     }
 }
