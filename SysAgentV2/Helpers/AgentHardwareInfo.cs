@@ -1,5 +1,7 @@
 ﻿using Hardware.Info;
 using SysAgentV2.Helpers.Interfaces;
+using SysAgentV2.Models;
+using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Management;
 using System.ServiceProcess;
@@ -126,9 +128,9 @@ namespace SysAgentV2.Helpers
         {
             var listProcess = new List<Models.Process>();
 
-            Process[] processes = Process.GetProcesses();
+            System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
 
-            foreach (Process process in processes)
+            foreach (System.Diagnostics.Process process in processes)
             {
                 try
                 {
@@ -153,11 +155,11 @@ namespace SysAgentV2.Helpers
 
         public Models.Process GetProcessByPid(int pid)
         {
-            Process[] processes = Process.GetProcesses();
+            System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
 
             try
             {
-                foreach (Process process in processes)
+                foreach (System.Diagnostics.Process process in processes)
                 {
                     if (process.Id == pid)
                     {
@@ -244,10 +246,10 @@ namespace SysAgentV2.Helpers
 
         public (bool, Models.Process) KillProcessByPid(int pid)
         {
-            Process[] processes = Process.GetProcesses();
+            System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
             try
             {
-                foreach (Process process in processes)
+                foreach (System.Diagnostics.Process process in processes)
                 {
                     if (process.Id == pid)
                     {
@@ -273,6 +275,32 @@ namespace SysAgentV2.Helpers
             {
                 throw;
             }
+        }
+
+        public List<EventView> GetEventViewList(string logName, string date, string lastTime)
+        {
+            List<EventView> listEventView = new List<EventView>();
+            EventLog eventLog = new EventLog(logName);
+            int total = eventLog.Entries.Count;
+
+            int maxResults = lastTime == "*" ? int.MaxValue : Convert.ToInt32(lastTime);
+
+            for (int i = total - 1; i >= 0 && listEventView.Count < maxResults; i--) // percorre de trás pra frente
+            {
+                var entry = eventLog.Entries[i];
+                if (entry.TimeGenerated.ToString("yyyy-MM-dd") == date)
+                {
+                    listEventView.Add(new EventView
+                    {
+                        EntryType = entry.EntryType.ToString(),
+                        Source = entry.Source,
+                        Message = entry.Message,
+                        TimeGenerated = entry.TimeGenerated.ToString("yyyy-MM-dd HH:mm:ss"),
+                    });
+                }
+            }
+
+            return listEventView;
         }
     }
 }

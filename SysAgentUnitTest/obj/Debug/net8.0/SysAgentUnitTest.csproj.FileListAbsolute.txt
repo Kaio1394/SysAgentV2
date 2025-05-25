@@ -367,3 +367,8 @@ C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\obj\Debug\net8.0\refint\
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\obj\Debug\net8.0\SysAgentUnitTest.pdb
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\obj\Debug\net8.0\SysAgentUnitTest.genruntimeconfig.cache
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\obj\Debug\net8.0\ref\SysAgentUnitTest.dll
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\System.ServiceProcess.ServiceController.dll
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.ServiceProcess.ServiceController.dll

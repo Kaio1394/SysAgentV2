@@ -13,5 +13,6 @@ namespace SysAgentV2.Helpers.Interfaces
         Task<List<Models.Service>> GetListServicesAsync();
         Task<bool> StopServiceByDisplayNameAsync(string displayName);
         Task<bool> StartServiceByDisplayNameAsync(string displayName);
+        Task<List<Models.EventView>> GetEventViewList(string logName, string date, string lastTime);
     }
 }

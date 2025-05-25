@@ -101,5 +101,14 @@ namespace SysAgentV2.Helpers
                 return _hardwareInfo.StartServiceByDisplayName(displayName);
             });
         }
+
+        public Task<List<EventView>> GetEventViewList(string logName, string date, string lastTime)
+        {
+            return Task.Run(() =>
+            {
+                var listEventView = _hardwareInfo.GetEventViewList(logName, date, lastTime);
+                return listEventView;
+            });
+        }
     }
 }

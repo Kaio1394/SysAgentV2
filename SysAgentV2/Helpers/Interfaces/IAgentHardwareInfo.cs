@@ -1,4 +1,6 @@
-﻿namespace SysAgentV2.Helpers.Interfaces
+﻿using SysAgentV2.Models;
+
+namespace SysAgentV2.Helpers.Interfaces
 {
     public interface IAgentHardwareInfo
     {
@@ -16,5 +18,6 @@
         bool StopServiceByDisplayName(string displayName);
         bool StopServiceByServiceName(string serviceName);
         bool StartServiceByDisplayName(string displayName);
+        List<EventView> GetEventViewList(string logName, string date, string lastTime);
     }
 }
