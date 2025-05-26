@@ -29,7 +29,7 @@ namespace SysAgentV2.Controllers
             return Ok(script);
         }
 
-        [HttpGet("scripts")]
+        [HttpGet("script/all")]
         public async Task<IActionResult> GetAllScriptCmd()
         {
             var listScripts = await _agentScriptCmdService.GetAllScripts();

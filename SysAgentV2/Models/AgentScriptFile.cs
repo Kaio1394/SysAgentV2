@@ -6,6 +6,14 @@ namespace SysAgentV2.Models
     [Table("t_repo_scripts_file")]
     public class AgentScripFile: ModelBase
     {
+        [Column("tag")]
+        [Required]
+        public string? Tag { get; set; }
+
+        [Column("description")]
+        [Required]
+        public string? Description { get; set; }
+
         [Column("file_path")]
         [Required]
         public string? FilePath { get; set; }

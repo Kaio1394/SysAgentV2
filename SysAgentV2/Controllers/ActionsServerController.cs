@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SysAgentV2.Helpers.Interfaces;
 using SysAgentV2.Models;
+using SysAgentV2.Services.Interfaces;
 using System.Diagnostics;
 
 namespace SysAgentV2.Controllers
@@ -11,9 +12,11 @@ namespace SysAgentV2.Controllers
     public class ActionsServerController : ControllerBase
     {
         private readonly IHelper _helper;
-        public ActionsServerController(IHelper helper)
+        private readonly IAgentScriptCmdService _agentScriptCmdService;
+        public ActionsServerController(IHelper helper, IAgentScriptCmdService agentScriptCmdService)
         {
             _helper = helper;
+            _agentScriptCmdService = agentScriptCmdService;
         }
 
         [HttpPost("kill/process/{pid}")]
@@ -36,6 +39,29 @@ namespace SysAgentV2.Controllers
             return BadRequest(new
             {
                 Info = "Service not stopepd with successfull."
+            });
+        }
+
+        [HttpPost("execute/script/{uuid}")]
+        public async Task<IActionResult> ExecuteSCriptCmd([FromRoute] string uuid)
+        {
+            var script = await _agentScriptCmdService.GetAgentScriptCmdByUuid(uuid);
+            if (script == null)
+                return NotFound(new
+                {
+                    Info = "Script cmd not found."
+                });
+            if (string.IsNullOrEmpty(script.Script))
+                return BadRequest(new
+                {
+                    Info = "The column script is empty."
+                });
+            var output = await _helper.ExecuteScriptCmd(script.Script);
+            return Ok(new
+            {
+                Tag = $"{script.Tag}",
+                Script = script.Script,
+                Output = output
             });
         }
 

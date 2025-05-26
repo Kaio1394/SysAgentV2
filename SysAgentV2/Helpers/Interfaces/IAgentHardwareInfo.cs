@@ -19,5 +19,6 @@ namespace SysAgentV2.Helpers.Interfaces
         bool StopServiceByServiceName(string serviceName);
         bool StartServiceByDisplayName(string displayName);
         List<EventView> GetEventViewList(string logName, string date, string lastTime);
+        string ExecuteScriptCmd(string script);
     }
 }

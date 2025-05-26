@@ -302,5 +302,43 @@ namespace SysAgentV2.Helpers
 
             return listEventView;
         }
+
+        public string ExecuteScriptCmd(string script)
+        {
+            try
+            {
+                string output = "";
+                string error = "";
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = "cmd.exe",
+                    Arguments = $"/c {script}",
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = false
+                };
+
+                using (System.Diagnostics.Process process = System.Diagnostics.Process.Start(psi))
+                {
+                    output = process.StandardOutput.ReadToEnd();
+                    error = process.StandardError.ReadToEnd();
+                    process.WaitForExit();
+
+                    Console.WriteLine("Saída:");
+                    Console.WriteLine(output);
+
+                    if (!string.IsNullOrWhiteSpace(error))
+                    {
+                        return error;
+                    }
+                }
+                return output;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

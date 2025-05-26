@@ -39,7 +39,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 26, 4, 25, 49, 300, DateTimeKind.Utc).AddTicks(188),
+                            CreatedAt = new DateTime(2025, 5, 26, 20, 17, 24, 280, DateTimeKind.Utc).AddTicks(7069),
                             Status = "STOPPED"
                         });
                 });
@@ -66,7 +66,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 26, 4, 25, 49, 300, DateTimeKind.Utc).AddTicks(4589),
+                            CreatedAt = new DateTime(2025, 5, 26, 20, 17, 24, 281, DateTimeKind.Utc).AddTicks(1853),
                             HealthStatus = "DISABLED"
                         });
                 });
@@ -80,6 +80,11 @@ namespace SysAgentV2.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT")
                         .HasColumnName("created_at");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
 
                     b.Property<string>("FilePath")
                         .IsRequired()
@@ -97,6 +102,11 @@ namespace SysAgentV2.Migrations
 
                     b.Property<string>("Output")
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("Tag")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("tag");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("TEXT")
@@ -117,6 +127,10 @@ namespace SysAgentV2.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("created_at");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
+
                     b.Property<bool>("IsChained")
                         .HasColumnType("INTEGER")
                         .HasColumnName("is_chained");
@@ -125,6 +139,11 @@ namespace SysAgentV2.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("script");
+
+                    b.Property<string>("Tag")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("tag");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("TEXT")

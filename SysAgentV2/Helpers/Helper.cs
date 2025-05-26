@@ -110,5 +110,13 @@ namespace SysAgentV2.Helpers
                 return listEventView;
             });
         }
+
+        public Task<string> ExecuteScriptCmd(string script)
+        {
+            return Task.Run(() =>
+            {
+                return _hardwareInfo.ExecuteScriptCmd(script);
+            });
+        }
     }
 }
