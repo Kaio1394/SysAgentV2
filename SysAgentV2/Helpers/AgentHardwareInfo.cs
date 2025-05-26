@@ -285,7 +285,7 @@ namespace SysAgentV2.Helpers
 
             int maxResults = lastTime == "*" ? int.MaxValue : Convert.ToInt32(lastTime);
 
-            for (int i = total - 1; i >= 0 && listEventView.Count < maxResults; i--) // percorre de trás pra frente
+            for (int i = total - 1; i >= 0 && listEventView.Count < maxResults; i--) 
             {
                 var entry = eventLog.Entries[i];
                 if (entry.TimeGenerated.ToString("yyyy-MM-dd") == date)
