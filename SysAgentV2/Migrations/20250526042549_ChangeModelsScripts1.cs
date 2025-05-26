@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SysAgentV2.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstMigration : Migration
+    public partial class ChangeModelsScripts1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,7 +31,6 @@ namespace SysAgentV2.Migrations
                 {
                     uuid = table.Column<string>(type: "TEXT", nullable: false),
                     script = table.Column<string>(type: "TEXT", nullable: false),
-                    output = table.Column<string>(type: "TEXT", nullable: false),
                     is_chained = table.Column<bool>(type: "INTEGER", nullable: false),
                     created_at = table.Column<DateTime>(type: "TEXT", nullable: false),
                     updated_at = table.Column<DateTime>(type: "TEXT", nullable: true)
@@ -48,7 +47,7 @@ namespace SysAgentV2.Migrations
                     uuid = table.Column<string>(type: "TEXT", nullable: false),
                     file_path = table.Column<string>(type: "TEXT", nullable: false),
                     language = table.Column<string>(type: "TEXT", nullable: false),
-                    output = table.Column<string>(type: "TEXT", nullable: false),
+                    Output = table.Column<string>(type: "TEXT", nullable: true),
                     is_chained = table.Column<bool>(type: "INTEGER", nullable: false),
                     created_at = table.Column<DateTime>(type: "TEXT", nullable: false),
                     updated_at = table.Column<DateTime>(type: "TEXT", nullable: true)
@@ -87,12 +86,12 @@ namespace SysAgentV2.Migrations
             migrationBuilder.InsertData(
                 table: "t_status_agent",
                 columns: new[] { "Id", "edited_at", "status" },
-                values: new object[] { 1, new DateTime(2025, 5, 24, 14, 33, 58, 872, DateTimeKind.Utc).AddTicks(904), "STOPPED" });
+                values: new object[] { 1, new DateTime(2025, 5, 26, 4, 25, 49, 300, DateTimeKind.Utc).AddTicks(188), "STOPPED" });
 
             migrationBuilder.InsertData(
                 table: "t_status_health",
                 columns: new[] { "Id", "edited_at", "health_status" },
-                values: new object[] { 1, new DateTime(2025, 5, 24, 14, 33, 58, 872, DateTimeKind.Utc).AddTicks(5016), "DISABLED" });
+                values: new object[] { 1, new DateTime(2025, 5, 26, 4, 25, 49, 300, DateTimeKind.Utc).AddTicks(4589), "DISABLED" });
         }
 
         /// <inheritdoc />

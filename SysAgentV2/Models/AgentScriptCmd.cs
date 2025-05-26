@@ -10,11 +10,8 @@ namespace SysAgentV2.Models
         [Required]
         public string? Script { get; set; }
 
-        [Column("output")]
-        [Required]
-        public string? Output { get; set; }
-
         [Column("is_chained")]
+        [Required]
         public bool IsChained { get; set; } = false;
     }
 }

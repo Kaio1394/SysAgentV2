@@ -16,7 +16,7 @@ namespace SysAgentV2.Controllers
             _helper = helper;
         }
 
-        [HttpPost("kill/service/{pid}")]
+        [HttpPost("kill/process/{pid}")]
         public async Task<IActionResult> KillService([FromRoute] int pid)
         {
             var cpuInfo = await _helper.GetInfoCpuAsync();

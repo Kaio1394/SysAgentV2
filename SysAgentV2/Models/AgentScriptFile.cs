@@ -14,8 +14,6 @@ namespace SysAgentV2.Models
         [Required]
         public string? Language { get; set; }
 
-        [Column("output")]
-        [Required]
         public string? Output { get; set; }
 
         [Column("is_chained")]

@@ -11,8 +11,8 @@ using SysAgentV2.Data;
 namespace SysAgentV2.Migrations
 {
     [DbContext(typeof(SysDbContext))]
-    [Migration("20250524143358_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20250526042549_ChangeModelsScripts1")]
+    partial class ChangeModelsScripts1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,7 +42,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 24, 14, 33, 58, 872, DateTimeKind.Utc).AddTicks(904),
+                            CreatedAt = new DateTime(2025, 5, 26, 4, 25, 49, 300, DateTimeKind.Utc).AddTicks(188),
                             Status = "STOPPED"
                         });
                 });
@@ -69,7 +69,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 24, 14, 33, 58, 872, DateTimeKind.Utc).AddTicks(5016),
+                            CreatedAt = new DateTime(2025, 5, 26, 4, 25, 49, 300, DateTimeKind.Utc).AddTicks(4589),
                             HealthStatus = "DISABLED"
                         });
                 });
@@ -99,9 +99,7 @@ namespace SysAgentV2.Migrations
                         .HasColumnName("language");
 
                     b.Property<string>("Output")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("output");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("TEXT")
@@ -125,11 +123,6 @@ namespace SysAgentV2.Migrations
                     b.Property<bool>("IsChained")
                         .HasColumnType("INTEGER")
                         .HasColumnName("is_chained");
-
-                    b.Property<string>("Output")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("output");
 
                     b.Property<string>("Script")
                         .IsRequired()
