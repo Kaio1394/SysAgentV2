@@ -13,24 +13,32 @@ namespace SysAgentV2.Services
         }
         public async Task<AgentScriptCmd> CreateScript(AgentScriptCmd scripts)
         {
-            await _repo.CreateScript(scripts);
+            var scriptModel = await _repo.GetAgentScriptCmdByTagAsync(scripts.Tag);
+            if (scriptModel != null && scriptModel.Tag == scripts.Tag)
+                return null;
+            await _repo.CreateScriptAsync(scripts);
             return scripts;
+        }
+
+        public async Task<bool> DeleteScript(string uuid)
+        {
+            return await _repo.DeleteScriptAsync(uuid);
         }
 
         public async Task<AgentScriptCmd> GetAgentScriptCmdByUuid(string uuid)
         {
-            return await _repo.GetAgentScriptCmdByUuid(uuid);
+            return await _repo.GetAgentScriptCmdByUuidAsync(uuid);
         }
 
         public async Task<IEnumerable<AgentScriptCmd>> GetAllScripts()
         {
-            var listScripts = await _repo.GetAllScripts();
+            var listScripts = await _repo.GetAllScriptsAsync();
             return listScripts;
         }
 
-        public Task<AgentScriptCmd> Update(AgentScriptCmd scripts)
+        public async Task<AgentScriptCmd> UpdateAsync(AgentScriptCmd scripts)
         {
-            throw new NotImplementedException();
+            return await _repo.UpdateAsync(scripts);
         }
     }
 }

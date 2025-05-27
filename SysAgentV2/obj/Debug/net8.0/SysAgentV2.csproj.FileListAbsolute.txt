@@ -275,8 +275,6 @@ C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\SysAgentV2.As
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\SysAgentV2.csproj.CoreCompileInputs.cache
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\SysAgentV2.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\SysAgentV2.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\SysAgentV2.RazorAssemblyInfo.cache
-C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\SysAgentV2.RazorAssemblyInfo.cs
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\SysAgentV2.sourcelink.json
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentV2\obj\Debug\net8.0\staticwebassets.development.json
