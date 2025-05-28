@@ -1,11 +1,11 @@
 ﻿
 using System.Text.Json.Serialization;
 
-namespace SysAgentV2.Models
+namespace SysAgentV2.Models.Infos
 {
     public class Process
     {
-        public string Name { get; set; }  
+        public string Name { get; set; }
         public int Id { get; set; }
 
         [JsonIgnore]

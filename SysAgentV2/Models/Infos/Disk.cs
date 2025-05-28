@@ -1,12 +1,12 @@
-﻿namespace SysAgentV2.Models
+﻿namespace SysAgentV2.Models.Infos
 {
     public class Disk
     {
         public string Name { get; set; }
-        public DictioaryInfoDisk? Info {get; set;}
+        public DictionaryInfoDisk? Info { get; set; }
     }
 
-    public class DictioaryInfoDisk
+    public class DictionaryInfoDisk
     {
         public long TotalSpace { get; set; }
         public long UsedSpace { get; set; }

@@ -1,6 +1,6 @@
 ﻿using Hardware.Info;
 using SysAgentV2.Helpers.Interfaces;
-using SysAgentV2.Models;
+using SysAgentV2.Models.Infos;
 using System.Diagnostics;
 using System.Management;
 
@@ -14,7 +14,7 @@ namespace SysAgentV2.Helpers
             _hardwareInfo = hardwareInfo;
         }
 
-        public Task<Models.Memory> GetMemoryInfoAsync()
+        public Task<Models.Infos.Memory> GetMemoryInfoAsync()
         {
             return Task.Run(() =>
             {
@@ -23,7 +23,7 @@ namespace SysAgentV2.Helpers
             });
         }
 
-        public Task<List<Models.Disk>> GetInfoDiskAsync()
+        public Task<List<Disk>> GetInfoDiskAsync()
         {
             return Task.Run(() =>
             {
@@ -59,7 +59,7 @@ namespace SysAgentV2.Helpers
                 return cpuInfo;
             });
         }
-        public Task<List<Models.Process>> GetInfoProcessAsync()
+        public Task<List<Models.Infos.Process>> GetInfoProcessAsync()
         {
             return Task.Run(() =>
             {
@@ -68,7 +68,7 @@ namespace SysAgentV2.Helpers
             });
         }
 
-        public Task<Models.Process> GetProcessByPidAsync(int pid)
+        public Task<Models.Infos.Process> GetProcessByPidAsync(int pid)
         {
             return Task.Run(() =>
             {

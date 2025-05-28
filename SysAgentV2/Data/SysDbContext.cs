@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SysAgentV2.Models;
+using SysAgentV2.Models.Schedulling;
+using SysAgentV2.Models.Scripts;
 
 namespace SysAgentV2.Data
 {
@@ -8,8 +10,10 @@ namespace SysAgentV2.Data
         public SysDbContext(DbContextOptions<SysDbContext> options): base(options) { }
         public DbSet<CollectMetrics> CollectMetrics { get; set; }
         public DbSet<AgentExecutionStatus> AgentStatus { get; set; }
-        public DbSet<AgentScriptCmd> AgentScriptCmd { get; set; }
-        public DbSet<AgentScripFile> AgentScripFile { get; set; }
+        public DbSet<ScriptCmd> ScriptCmd { get; set; }
+        public DbSet<ScripFile> ScripFile { get; set; }
+        public DbSet<Schedule> Schedule { get; set; }
+        public DbSet<ScheduleScripts> ScheduleScripts { get; set; }
 
         // To input data to database
         protected override void OnModelCreating(ModelBuilder modelBuilder)

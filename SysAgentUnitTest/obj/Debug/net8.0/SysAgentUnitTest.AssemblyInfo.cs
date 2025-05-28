@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SysAgentUnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+833a71cb6c6cda78d89157c8a7b3bf8cb1cd08aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+990c2f0fb9697fb7ae0fbb88ca5444d3f11ab705")]
 [assembly: System.Reflection.AssemblyProductAttribute("SysAgentUnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SysAgentUnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

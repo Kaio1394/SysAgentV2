@@ -1,14 +1,15 @@
 ﻿using Microsoft.CodeAnalysis.Scripting;
+using SysAgentV2.Models.Scripts;
 
 namespace SysAgentV2.Repository.Interfaces
 {
-    public interface IAgentScriptCmdRepository
+    public interface IScriptCmdRepository
     {
-        Task<Models.AgentScriptCmd> CreateScriptAsync(Models.AgentScriptCmd scripts);
-        Task<Models.AgentScriptCmd> UpdateAsync(Models.AgentScriptCmd scripts);
-        Task<Models.AgentScriptCmd> GetAgentScriptCmdByUuidAsync(string uuid);
-        Task<Models.AgentScriptCmd> GetAgentScriptCmdByTagAsync(string tag);
-        Task<IEnumerable<Models.AgentScriptCmd>> GetAllScriptsAsync();
+        Task<ScriptCmd> CreateScriptAsync(ScriptCmd scripts);
+        Task<ScriptCmd> UpdateAsync(ScriptCmd scripts);
+        Task<ScriptCmd> GetScriptCmdByUuidAsync(string uuid);
+        Task<ScriptCmd> GetScriptCmdByTagAsync(string tag);
+        Task<IEnumerable<ScriptCmd>> GetAllScriptsAsync();
         Task<bool> DeleteScriptAsync(string uuid);
         Task<bool> SaveChanges();
     }

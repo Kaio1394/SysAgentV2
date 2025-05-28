@@ -39,7 +39,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 26, 20, 17, 24, 280, DateTimeKind.Utc).AddTicks(7069),
+                            CreatedAt = new DateTime(2025, 5, 28, 15, 54, 13, 767, DateTimeKind.Utc).AddTicks(1099),
                             Status = "STOPPED"
                         });
                 });
@@ -66,92 +66,9 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 26, 20, 17, 24, 281, DateTimeKind.Utc).AddTicks(1853),
+                            CreatedAt = new DateTime(2025, 5, 28, 15, 54, 13, 767, DateTimeKind.Utc).AddTicks(5436),
                             HealthStatus = "DISABLED"
                         });
-                });
-
-            modelBuilder.Entity("SysAgentV2.Models.AgentScripFile", b =>
-                {
-                    b.Property<string>("Uuid")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("uuid");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("created_at");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("description");
-
-                    b.Property<string>("FilePath")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("file_path");
-
-                    b.Property<bool>("IsChained")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("is_chained");
-
-                    b.Property<string>("Language")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("language");
-
-                    b.Property<string>("Output")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Tag")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("tag");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("updated_at");
-
-                    b.HasKey("Uuid");
-
-                    b.ToTable("t_repo_scripts_file");
-                });
-
-            modelBuilder.Entity("SysAgentV2.Models.AgentScriptCmd", b =>
-                {
-                    b.Property<string>("Uuid")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("uuid");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("created_at");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("description");
-
-                    b.Property<bool>("IsChained")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("is_chained");
-
-                    b.Property<string>("Script")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("script");
-
-                    b.Property<string>("Tag")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("tag");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("updated_at");
-
-                    b.HasKey("Uuid");
-
-                    b.ToTable("t_repo_scripts_cmd");
                 });
 
             modelBuilder.Entity("SysAgentV2.Models.CollectMetrics", b =>
@@ -177,6 +94,174 @@ namespace SysAgentV2.Migrations
                     b.HasKey("Uuid");
 
                     b.ToTable("t_collect_metrics");
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.Schedulling.Schedule", b =>
+                {
+                    b.Property<string>("Uuid")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("DaysOfWeek")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("days_of_week");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
+
+                    b.Property<string>("TagSchedule")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("tag_schedule");
+
+                    b.Property<TimeSpan>("Time")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("time");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Uuid");
+
+                    b.HasIndex("TagSchedule")
+                        .IsUnique();
+
+                    b.ToTable("t_schedules");
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.Schedulling.ScheduleScripts", b =>
+                {
+                    b.Property<string>("Uuid")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<int>("ExecutionOrder")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("execution_order");
+
+                    b.Property<string>("ScheduleUuid")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("schedule_uuid");
+
+                    b.Property<string>("ScriptsUuid")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("script_uuid");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Uuid");
+
+                    b.HasIndex("ScheduleUuid");
+
+                    b.HasIndex("ScriptsUuid");
+
+                    b.ToTable("t_schedule_scripts_cmd");
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.Scripts.ScripFile", b =>
+                {
+                    b.Property<string>("Uuid")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
+
+                    b.Property<string>("FilePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("file_path");
+
+                    b.Property<string>("Language")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("language");
+
+                    b.Property<string>("Tag")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("tag");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Uuid");
+
+                    b.ToTable("t_repo_scripts_file");
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.Scripts.ScriptCmd", b =>
+                {
+                    b.Property<string>("Uuid")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("created_at");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("description");
+
+                    b.Property<string>("Script")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("script");
+
+                    b.Property<string>("Tag")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("tag");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Uuid");
+
+                    b.ToTable("t_repo_scripts_cmd");
+                });
+
+            modelBuilder.Entity("SysAgentV2.Models.Schedulling.ScheduleScripts", b =>
+                {
+                    b.HasOne("SysAgentV2.Models.Schedulling.Schedule", "Schedule")
+                        .WithMany()
+                        .HasForeignKey("ScheduleUuid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SysAgentV2.Models.Scripts.ScriptCmd", "ScriptCmd")
+                        .WithMany()
+                        .HasForeignKey("ScriptsUuid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Schedule");
+
+                    b.Navigation("ScriptCmd");
                 });
 #pragma warning restore 612, 618
         }

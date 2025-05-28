@@ -12,11 +12,11 @@ namespace SysAgentV2.Controllers
     public class ActionsServerController : ControllerBase
     {
         private readonly IHelper _helper;
-        private readonly IAgentScriptCmdService _agentScriptCmdService;
-        public ActionsServerController(IHelper helper, IAgentScriptCmdService agentScriptCmdService)
+        private readonly IScriptCmdService _ScriptCmdService;
+        public ActionsServerController(IHelper helper, IScriptCmdService ScriptCmdService)
         {
             _helper = helper;
-            _agentScriptCmdService = agentScriptCmdService;
+            _ScriptCmdService = ScriptCmdService;
         }
 
         [HttpPost("kill/process/{pid}")]
@@ -45,7 +45,7 @@ namespace SysAgentV2.Controllers
         [HttpPost("execute/script/{uuid}")]
         public async Task<IActionResult> ExecuteSCriptCmd([FromRoute] string uuid)
         {
-            var script = await _agentScriptCmdService.GetAgentScriptCmdByUuid(uuid);
+            var script = await _ScriptCmdService.GetScriptCmdByUuid(uuid);
             if (script == null)
                 return NotFound(new
                 {

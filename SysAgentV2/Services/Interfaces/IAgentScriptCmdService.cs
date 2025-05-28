@@ -1,12 +1,14 @@
-﻿namespace SysAgentV2.Services.Interfaces
+﻿using SysAgentV2.Models.Scripts;
+
+namespace SysAgentV2.Services.Interfaces
 {
-    public interface IAgentScriptCmdService
+    public interface IScriptCmdService
     {
-        Task<Models.AgentScriptCmd> CreateScript(Models.AgentScriptCmd scripts);
-        Task<Models.AgentScriptCmd> UpdateAsync(Models.AgentScriptCmd scripts);
-        Task<Models.AgentScriptCmd> GetAgentScriptCmdByUuid(string uuid);
+        Task<ScriptCmd> CreateScript(ScriptCmd scripts);
+        Task<ScriptCmd> UpdateAsync(ScriptCmd scripts);
+        Task<ScriptCmd> GetScriptCmdByUuid(string uuid);
         Task<bool> DeleteScript(string uuid);
 
-        Task<IEnumerable<Models.AgentScriptCmd>> GetAllScripts();
+        Task<IEnumerable<ScriptCmd>> GetAllScripts();
     }
 }

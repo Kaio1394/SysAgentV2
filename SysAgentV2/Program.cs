@@ -34,8 +34,8 @@ try
     builder.Services.AddScoped<IAgentExecutionStatusRepository, AgentExecutionStatusRepository>();
     builder.Services.AddScoped<IAgentExecutionStatusService, AgentExecutionStatusService>();
 
-    builder.Services.AddScoped<IAgentScriptCmdRepository, AgentScriptCmdRepository>();
-    builder.Services.AddScoped<IAgentScriptCmdService, AgentScriptCmdService>();
+    builder.Services.AddScoped<IScriptCmdRepository, ScriptCmdRepository>();
+    builder.Services.AddScoped<IScriptCmdService, ScriptCmdService>();
 
     builder.Services.AddScoped<IHelper, Helper>();
     builder.Services.AddScoped<IAgentHardwareInfo, AgentHardwareInfo>();

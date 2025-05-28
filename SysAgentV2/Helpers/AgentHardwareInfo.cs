@@ -1,6 +1,6 @@
 ﻿using Hardware.Info;
 using SysAgentV2.Helpers.Interfaces;
-using SysAgentV2.Models;
+using SysAgentV2.Models.Infos;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Management;
@@ -69,9 +69,9 @@ namespace SysAgentV2.Helpers
             }
         }
 
-        public Models.Cpu GetInfoCpu()
+        public Cpu GetInfoCpu()
         {
-            return new Models.Cpu()
+            return new Cpu()
             {
                 NameProcessor = GetProcessorName(),
                 Core = GetQtyCore(),
@@ -80,9 +80,9 @@ namespace SysAgentV2.Helpers
             };
         }
 
-        public List<Models.Disk> GetInfoDisk()
+        public List<Disk> GetInfoDisk()
         {
-            List<Models.Disk> list = new List<Models.Disk>();
+            List<Disk> list = new List<Disk>();
 
             foreach (DriveInfo drive in DriveInfo.GetDrives())
             {
@@ -92,10 +92,10 @@ namespace SysAgentV2.Helpers
                     long freeSpace = drive.TotalFreeSpace / (1024 * 1024 * 1024);
                     long usedSpace = totalSpace - freeSpace;
 
-                    list.Add(new Models.Disk()
+                    list.Add(new Disk()
                     {
                         Name = drive.Name,
-                        Info = new Models.DictioaryInfoDisk()
+                        Info = new DictionaryInfoDisk()
                         {
                             TotalSpace = totalSpace,
                             UsedSpace = usedSpace,
@@ -107,10 +107,10 @@ namespace SysAgentV2.Helpers
             return list;
         }
 
-        public Models.Memory GetInfoMemory()
+        public Models.Infos.Memory GetInfoMemory()
         {
             var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
-            Models.Memory? memory = new Models.Memory();
+            Models.Infos.Memory? memory = new Models.Infos.Memory();
             foreach (var obj in searcher.Get())
             {
                 double totalVisibleMemory = Convert.ToDouble(obj["TotalVisibleMemorySize"]) / 1024; 
@@ -124,9 +124,9 @@ namespace SysAgentV2.Helpers
             return memory;
         }
 
-        public List<Models.Process> GetListProcess()
+        public List<Models.Infos.Process> GetListProcess()
         {
-            var listProcess = new List<Models.Process>();
+            var listProcess = new List<Models.Infos.Process>();
 
             System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
 
@@ -137,7 +137,7 @@ namespace SysAgentV2.Helpers
                     long memoryMB = process.WorkingSet64 / (1024 * 1024);
 
                     if (memoryMB > 0)
-                        listProcess.Add(new Models.Process
+                        listProcess.Add(new Models.Infos.Process
                         {
                             Id = process.Id,
                             Name = process.ProcessName,
@@ -153,7 +153,7 @@ namespace SysAgentV2.Helpers
             return listProcess.OrderByDescending(x => x.UsageMemoryAux).ToList();
         }
 
-        public Models.Process GetProcessByPid(int pid)
+        public Models.Infos.Process GetProcessByPid(int pid)
         {
             System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
 
@@ -165,7 +165,7 @@ namespace SysAgentV2.Helpers
                     {
                         long memoryMB = process.WorkingSet64 / (1024 * 1024);
 
-                        var processModel = new Models.Process
+                        var processModel = new Models.Infos.Process
                         {
                             Id = process.Id,
                             Name = process.ProcessName,
@@ -182,13 +182,13 @@ namespace SysAgentV2.Helpers
                 throw;
             } 
         }
-        public List<Models.Service> GetListServices()
+        public List<Service> GetListServices()
         {
             var services = ServiceController.GetServices();
-            List<Models.Service> listServices = new List<Models.Service>();
+            List<Service> listServices = new List<Service>();
             foreach (var service in services)
             {
-                listServices.Add(new Models.Service
+                listServices.Add(new Models.Infos.Service
                 {
                     DisplayName = service.DisplayName,
                      ServiceName = service.ServiceName,
@@ -244,7 +244,7 @@ namespace SysAgentV2.Helpers
             return false;
         }
 
-        public (bool, Models.Process) KillProcessByPid(int pid)
+        public (bool, Models.Infos.Process) KillProcessByPid(int pid)
         {
             System.Diagnostics.Process[] processes = System.Diagnostics.Process.GetProcesses();
             try
@@ -255,7 +255,7 @@ namespace SysAgentV2.Helpers
                     {
                         long memoryMB = process.WorkingSet64 / (1024 * 1024);
 
-                        var processModel = new Models.Process
+                        var processModel = new Models.Infos.Process
                         {
                             Id = process.Id,
                             Name = process.ProcessName,

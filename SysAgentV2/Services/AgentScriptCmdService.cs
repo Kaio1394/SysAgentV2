@@ -1,19 +1,19 @@
-﻿using SysAgentV2.Models;
+﻿using SysAgentV2.Models.Scripts;
 using SysAgentV2.Repository.Interfaces;
 using SysAgentV2.Services.Interfaces;
 
 namespace SysAgentV2.Services
 {
-    public class AgentScriptCmdService : IAgentScriptCmdService
+    public class ScriptCmdService : IScriptCmdService
     {
-        private readonly IAgentScriptCmdRepository _repo;
-        public AgentScriptCmdService(IAgentScriptCmdRepository agentScriptCmdRepository)
+        private readonly IScriptCmdRepository _repo;
+        public ScriptCmdService(IScriptCmdRepository ScriptCmdRepository)
         {
-            _repo = agentScriptCmdRepository;
+            _repo = ScriptCmdRepository;
         }
-        public async Task<AgentScriptCmd> CreateScript(AgentScriptCmd scripts)
+        public async Task<ScriptCmd> CreateScript(ScriptCmd scripts)
         {
-            var scriptModel = await _repo.GetAgentScriptCmdByTagAsync(scripts.Tag);
+            var scriptModel = await _repo.GetScriptCmdByTagAsync(scripts.Tag);
             if (scriptModel != null && scriptModel.Tag == scripts.Tag)
                 return null;
             await _repo.CreateScriptAsync(scripts);
@@ -25,18 +25,18 @@ namespace SysAgentV2.Services
             return await _repo.DeleteScriptAsync(uuid);
         }
 
-        public async Task<AgentScriptCmd> GetAgentScriptCmdByUuid(string uuid)
+        public async Task<ScriptCmd> GetScriptCmdByUuid(string uuid)
         {
-            return await _repo.GetAgentScriptCmdByUuidAsync(uuid);
+            return await _repo.GetScriptCmdByUuidAsync(uuid);
         }
 
-        public async Task<IEnumerable<AgentScriptCmd>> GetAllScripts()
+        public async Task<IEnumerable<ScriptCmd>> GetAllScripts()
         {
             var listScripts = await _repo.GetAllScriptsAsync();
             return listScripts;
         }
 
-        public async Task<AgentScriptCmd> UpdateAsync(AgentScriptCmd scripts)
+        public async Task<ScriptCmd> UpdateAsync(ScriptCmd scripts)
         {
             return await _repo.UpdateAsync(scripts);
         }

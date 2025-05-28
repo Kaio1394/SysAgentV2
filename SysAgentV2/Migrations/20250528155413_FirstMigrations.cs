@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SysAgentV2.Migrations
 {
     /// <inheritdoc />
-    public partial class ImplementMigrations : Migration
+    public partial class FirstMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,7 +33,6 @@ namespace SysAgentV2.Migrations
                     tag = table.Column<string>(type: "TEXT", nullable: false),
                     description = table.Column<string>(type: "TEXT", nullable: true),
                     script = table.Column<string>(type: "TEXT", nullable: false),
-                    is_chained = table.Column<bool>(type: "INTEGER", nullable: false),
                     created_at = table.Column<DateTime>(type: "TEXT", nullable: false),
                     updated_at = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
@@ -51,14 +50,29 @@ namespace SysAgentV2.Migrations
                     description = table.Column<string>(type: "TEXT", nullable: false),
                     file_path = table.Column<string>(type: "TEXT", nullable: false),
                     language = table.Column<string>(type: "TEXT", nullable: false),
-                    Output = table.Column<string>(type: "TEXT", nullable: true),
-                    is_chained = table.Column<bool>(type: "INTEGER", nullable: false),
                     created_at = table.Column<DateTime>(type: "TEXT", nullable: false),
                     updated_at = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_t_repo_scripts_file", x => x.uuid);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_schedules",
+                columns: table => new
+                {
+                    uuid = table.Column<string>(type: "TEXT", nullable: false),
+                    tag_schedule = table.Column<string>(type: "TEXT", nullable: false),
+                    description = table.Column<string>(type: "TEXT", nullable: true),
+                    time = table.Column<TimeSpan>(type: "TEXT", nullable: false),
+                    days_of_week = table.Column<string>(type: "TEXT", nullable: false),
+                    created_at = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_schedules", x => x.uuid);
                 });
 
             migrationBuilder.CreateTable(
@@ -87,15 +101,59 @@ namespace SysAgentV2.Migrations
                     table.PrimaryKey("PK_t_status_health", x => x.Id);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "t_schedule_scripts_cmd",
+                columns: table => new
+                {
+                    uuid = table.Column<string>(type: "TEXT", nullable: false),
+                    schedule_uuid = table.Column<string>(type: "TEXT", nullable: false),
+                    script_uuid = table.Column<string>(type: "TEXT", nullable: false),
+                    execution_order = table.Column<int>(type: "INTEGER", nullable: false),
+                    created_at = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_schedule_scripts_cmd", x => x.uuid);
+                    table.ForeignKey(
+                        name: "FK_t_schedule_scripts_cmd_t_repo_scripts_cmd_script_uuid",
+                        column: x => x.script_uuid,
+                        principalTable: "t_repo_scripts_cmd",
+                        principalColumn: "uuid",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_t_schedule_scripts_cmd_t_schedules_schedule_uuid",
+                        column: x => x.schedule_uuid,
+                        principalTable: "t_schedules",
+                        principalColumn: "uuid",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "t_status_agent",
                 columns: new[] { "Id", "edited_at", "status" },
-                values: new object[] { 1, new DateTime(2025, 5, 26, 20, 17, 24, 280, DateTimeKind.Utc).AddTicks(7069), "STOPPED" });
+                values: new object[] { 1, new DateTime(2025, 5, 28, 15, 54, 13, 767, DateTimeKind.Utc).AddTicks(1099), "STOPPED" });
 
             migrationBuilder.InsertData(
                 table: "t_status_health",
                 columns: new[] { "Id", "edited_at", "health_status" },
-                values: new object[] { 1, new DateTime(2025, 5, 26, 20, 17, 24, 281, DateTimeKind.Utc).AddTicks(1853), "DISABLED" });
+                values: new object[] { 1, new DateTime(2025, 5, 28, 15, 54, 13, 767, DateTimeKind.Utc).AddTicks(5436), "DISABLED" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_schedule_scripts_cmd_schedule_uuid",
+                table: "t_schedule_scripts_cmd",
+                column: "schedule_uuid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_schedule_scripts_cmd_script_uuid",
+                table: "t_schedule_scripts_cmd",
+                column: "script_uuid");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_schedules_tag_schedule",
+                table: "t_schedules",
+                column: "tag_schedule",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -105,16 +163,22 @@ namespace SysAgentV2.Migrations
                 name: "t_collect_metrics");
 
             migrationBuilder.DropTable(
-                name: "t_repo_scripts_cmd");
+                name: "t_repo_scripts_file");
 
             migrationBuilder.DropTable(
-                name: "t_repo_scripts_file");
+                name: "t_schedule_scripts_cmd");
 
             migrationBuilder.DropTable(
                 name: "t_status_agent");
 
             migrationBuilder.DropTable(
                 name: "t_status_health");
+
+            migrationBuilder.DropTable(
+                name: "t_repo_scripts_cmd");
+
+            migrationBuilder.DropTable(
+                name: "t_schedules");
         }
     }
 }

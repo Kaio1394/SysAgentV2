@@ -1,4 +1,4 @@
-﻿namespace SysAgentV2.Models
+﻿namespace SysAgentV2.Models.Infos
 {
     public class Cpu
     {

@@ -1,24 +1,25 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SysAgentV2.Models
+namespace SysAgentV2.Models.Scripts
 {
-    [Table("t_repo_scripts_cmd")]
-    public class AgentScriptCmd: ModelBase
+    [Table("t_repo_scripts_file")]
+    public class ScripFile : ModelBase
     {
         [Column("tag")]
         [Required]
         public string? Tag { get; set; }
 
         [Column("description")]
+        [Required]
         public string? Description { get; set; }
 
-        [Column("script")]
+        [Column("file_path")]
         [Required]
-        public string? Script { get; set; }
+        public string? FilePath { get; set; }
 
-        [Column("is_chained")]
+        [Column("language")]
         [Required]
-        public bool IsChained { get; set; } = false;
+        public string? Language { get; set; }
     }
 }
