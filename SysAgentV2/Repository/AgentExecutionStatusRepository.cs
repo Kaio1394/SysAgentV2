@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.CodeAnalysis.Scripting;
+using Microsoft.EntityFrameworkCore;
 using SysAgentV2.Data;
+using SysAgentV2.Enum;
 using SysAgentV2.Models;
 using SysAgentV2.Repository.Interfaces;
 
@@ -23,10 +25,19 @@ namespace SysAgentV2.Repository
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public Task Update(AgentExecutionStatus agent)
+        public async Task<bool> UpdateAsync(int statusInt)
         {
-            _context.AgentStatus.Update(agent);
-            return Task.CompletedTask;
+            var status = await _context.AgentStatus.FirstOrDefaultAsync(e => e.Id == 1);
+            if (status != null)
+            {
+                if(statusInt == 1)
+                    status.Status = ExecutionStatus.RUNNING.ToString();
+                else 
+                    status.Status = ExecutionStatus.STOPPED.ToString();
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -8,7 +8,6 @@ namespace SysAgentV2.Services.Interfaces
         Task<ScriptCmd> UpdateAsync(ScriptCmd scripts);
         Task<ScriptCmd> GetScriptCmdByUuid(string uuid);
         Task<bool> DeleteScript(string uuid);
-
         Task<IEnumerable<ScriptCmd>> GetAllScripts();
     }
 }

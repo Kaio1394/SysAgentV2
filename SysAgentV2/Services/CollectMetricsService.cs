@@ -13,27 +13,27 @@ namespace SysAgentV2.Services
             _repository = repository;
         }
 
-        public Task<CollectMetrics> CreateMetricData(CollectMetrics metric)
+        public Task<CollectMetrics> InsertInfoHardwareAsync(CollectMetrics metric)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<CollectMetrics>> GetAllMetricData()
+        public Task<IEnumerable<CollectMetrics>> GetAllMetricDataAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<CollectMetrics> GetMetricByDate(DateTime date)
+        public Task<CollectMetrics> GetMetricByDateAsync(DateTime date)
         {
             throw new NotImplementedException();
         }
 
-        public Task PurgeData()
+        public Task PurgeDataAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task PurgeMetricDataBeforeDate(DateTime date)
+        public Task PurgeMetricDataBeforeDateAsync(DateTime date)
         {
             throw new NotImplementedException();
         }

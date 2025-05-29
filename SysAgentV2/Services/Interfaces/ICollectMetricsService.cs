@@ -4,10 +4,10 @@ namespace SysAgentV2.Services.Interfaces
 {
     public interface ICollectMetricsService
     {
-        Task<IEnumerable<CollectMetrics>> GetAllMetricData();
-        Task<CollectMetrics> GetMetricByDate(DateTime date);
-        Task<CollectMetrics> CreateMetricData(CollectMetrics metric);
-        Task PurgeData();
-        Task PurgeMetricDataBeforeDate(DateTime date);
+        Task<IEnumerable<CollectMetrics>> GetAllMetricDataAsync();
+        Task<CollectMetrics> GetMetricByDateAsync(DateTime date);
+        Task<CollectMetrics> InsertInfoHardwareAsync(CollectMetrics metric);
+        Task PurgeDataAsync();
+        Task PurgeMetricDataBeforeDateAsync(DateTime date);
     }
 }

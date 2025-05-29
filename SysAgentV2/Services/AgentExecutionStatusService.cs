@@ -24,17 +24,9 @@ namespace SysAgentV2.Services
             return _mapper.Map<AgentExecutionStatusDto>(agentModel);
         }
 
-        public async Task<bool> UpdateStatusAsync(string status)
+        public async Task<bool> UpdateStatusAsync(int statusInt)
         {
-            var agentModel = await _repository.GetByIdAsync();
-
-            if (agentModel == null)
-                return false;
-
-            agentModel.Status = status;
-
-            _repository.Update(agentModel);
-            return await _repository.SaveChanges();
+            return await _repository.UpdateAsync(statusInt);
         }
     }
 }

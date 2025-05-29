@@ -9,10 +9,10 @@ namespace SysAgentV2.Services
 {
     public class AgentHealthStatusService : IAgentHealthStatusService
     {
-        private readonly IAgentExecutionStatusRepository _repository;
+        private readonly IAgentHealthStatusService _repository;
         private readonly IMapper _mapper;
 
-        public AgentHealthStatusService(IAgentExecutionStatusRepository repository, IMapper mapper)
+        public AgentHealthStatusService(IAgentHealthStatusService repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
@@ -20,21 +20,21 @@ namespace SysAgentV2.Services
 
         public async Task<AgentExecutionStatusDto?> GetHealthStatusAsync()
         {
-            var agentModel = await _repository.GetByIdAsync();
+            var agentModel = await _repository.GetHealthStatusAsync();
             return _mapper.Map<AgentExecutionStatusDto>(agentModel);
         }
 
-        public async Task<bool> UpdateHealthStatusAsync(string status)
-        {
-            var agentModel = await _repository.GetByIdAsync();
+        //public async Task<bool> UpdateHealthStatusAsync(string status)
+        //{
+        //    var agentModel = await _repository.GetByIdAsync();
 
-            if (agentModel == null)
-                return false;
+        //    if (agentModel == null)
+        //        return false;
 
-            agentModel.Status = status;
+        //    agentModel.Status = status;
 
-            _repository.Update(agentModel);
-            return await _repository.SaveChanges();
-        }
+        //    _repository.Update(agentModel);
+        //    return await _repository.SaveChanges();
+        //}
     }
 }

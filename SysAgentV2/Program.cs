@@ -10,6 +10,7 @@ using SysAgentV2.Repository;
 using SysAgentV2.Repository.Interfaces;
 using SysAgentV2.Services;
 using SysAgentV2.Services.Interfaces;
+using SysAgentV2.Worker;
 using System.ComponentModel.Design;
 
 try
@@ -44,6 +45,8 @@ try
         opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+    builder.Services.AddHostedService<StatusCollectDataWorker>();
 
     var app = builder.Build();
 

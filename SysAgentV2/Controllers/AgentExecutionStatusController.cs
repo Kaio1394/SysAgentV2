@@ -10,12 +10,12 @@ namespace SysAgentV2.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AgentHardwareController : Controller
+    public class AgentExecutionStatusController : Controller
     {
         private readonly IAgentExecutionStatusService _agentExecutionStatusService;
-        private readonly ILogger<AgentHardwareController> _logger;
+        private readonly ILogger<AgentExecutionStatusController> _logger;
 
-        public AgentHardwareController(IAgentExecutionStatusService agentExecutionStatusService, ILogger<AgentHardwareController> logger) 
+        public AgentExecutionStatusController(IAgentExecutionStatusService agentExecutionStatusService, ILogger<AgentExecutionStatusController> logger) 
         {
             _agentExecutionStatusService = agentExecutionStatusService;
             _logger = logger;
@@ -31,7 +31,7 @@ namespace SysAgentV2.Controllers
         public async Task<IActionResult> StartCollectData()
         {
             _logger.LogInformation($"Call endpoint {ControllerContext.ActionDescriptor.DisplayName}.");
-            var updateSuccessfull = await _agentExecutionStatusService.UpdateStatusAsync(ExecutionStatus.RUNNING.ToString());
+            var updateSuccessfull = await _agentExecutionStatusService.UpdateStatusAsync((int)ExecutionStatus.RUNNING);
             var response = new AgentStatusResponse()
             {
                 Info = new Info()
@@ -52,7 +52,7 @@ namespace SysAgentV2.Controllers
         [HttpPost("stop")]
         public async Task<IActionResult> StopCollectData()
         {
-            var updateSuccessfull = await _agentExecutionStatusService.UpdateStatusAsync(ExecutionStatus.STOPPED.ToString());
+            var updateSuccessfull = await _agentExecutionStatusService.UpdateStatusAsync((int)ExecutionStatus.STOPPED);
             var response = new AgentStatusResponse()
             {
                 Info = new Info()
