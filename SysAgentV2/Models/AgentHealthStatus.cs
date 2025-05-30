@@ -13,7 +13,7 @@ namespace SysAgentV2.Models
 
         [Column("health_status")]
         [Required]
-        public string HealthStatus { get; set; } = Enum.AgentHealthStatus.DISABLED.ToString();
+        public string HealthStatus { get; set; } = Enum.HealthStatus.DISABLED.ToString();
 
         [Column("edited_at")]
         [Required]

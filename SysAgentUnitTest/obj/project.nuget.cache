@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KgwAyYQQdj4=",
+  "dgSpecHash": "Umu3e0Uzkm0=",
   "success": true,
   "projectFilePath": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\SysAgentUnitTest.csproj",
   "expectedPackageFiles": [
@@ -134,6 +134,7 @@
     "C:\\Users\\kaios\\.nuget\\packages\\nunit3testadapter\\4.4.2\\nunit3testadapter.4.4.2.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.aspnetcore\\9.0.0\\serilog.aspnetcore.9.0.0.nupkg.sha512",
+    "C:\\Users\\kaios\\.nuget\\packages\\serilog.expressions\\5.0.0\\serilog.expressions.5.0.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.extensions.hosting\\9.0.0\\serilog.extensions.hosting.9.0.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.extensions.logging\\9.0.0\\serilog.extensions.logging.9.0.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.formatting.compact\\3.0.0\\serilog.formatting.compact.3.0.0.nupkg.sha512",

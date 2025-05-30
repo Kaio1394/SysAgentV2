@@ -98,6 +98,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Serilog.Expressions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"

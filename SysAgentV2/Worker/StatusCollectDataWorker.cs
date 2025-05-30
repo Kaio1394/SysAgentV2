@@ -18,23 +18,29 @@ namespace SysAgentV2.Worker
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            while (!stoppingToken.IsCancellationRequested)
+            using (var scope = _scopeFactory.CreateScope())
             {
-                using (var scope = _scopeFactory.CreateScope())
+                var dbContext = scope.ServiceProvider.GetRequiredService<SysDbContext>();
+                var helper = scope.ServiceProvider.GetRequiredService<IHelper>();
+
+                while (!stoppingToken.IsCancellationRequested)
                 {
-                    var dbContext = scope.ServiceProvider.GetRequiredService<SysDbContext>();
-                    var helper = scope.ServiceProvider.GetRequiredService<IHelper>();
                     var statusModel = dbContext.AgentStatus.FirstOrDefault(x => x.Id == 1);
-                    if (statusModel != null)
+                    if(statusModel == null)
                     {
-                        var status = statusModel.Status;
-                        if (status == ExecutionStatus.RUNNING.ToString())
-                        {
-                            var infoHardware = await helper.GetHardwareInfoAsync();
-                            var json = JsonSerializer.Serialize(infoHardware, new JsonSerializerOptions { WriteIndented = true });
-                            _logger.LogInformation(json);
-                        }
+                        _logger.LogError($"Table[{nameof(dbContext.AgentStatus)}] is empty.");
+                        break;
                     }
+                    _logger.LogInformation($"Checking agent status collect data: {statusModel.Status}");
+
+                    var status = statusModel.Status;
+                    if (status == ExecutionStatus.RUNNING.ToString())
+                    {
+                        var infoHardware = await helper.GetHardwareInfoAsync();
+                        var json = JsonSerializer.Serialize(infoHardware, new JsonSerializerOptions { WriteIndented = true });
+                        _logger.LogInformation(json);
+                    }
+                    await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);
                 }
             }
         }

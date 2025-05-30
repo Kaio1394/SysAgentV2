@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "agfrL8W4C6s=",
+  "dgSpecHash": "uk5yDcuJxTU=",
   "success": true,
   "projectFilePath": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\SysAgentV2.csproj",
   "expectedPackageFiles": [
@@ -145,6 +145,7 @@
     "C:\\Users\\kaios\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.aspnetcore\\9.0.0\\serilog.aspnetcore.9.0.0.nupkg.sha512",
+    "C:\\Users\\kaios\\.nuget\\packages\\serilog.expressions\\5.0.0\\serilog.expressions.5.0.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.extensions.hosting\\9.0.0\\serilog.extensions.hosting.9.0.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.extensions.logging\\9.0.0\\serilog.extensions.logging.9.0.0.nupkg.sha512",
     "C:\\Users\\kaios\\.nuget\\packages\\serilog.formatting.compact\\3.0.0\\serilog.formatting.compact.3.0.0.nupkg.sha512",

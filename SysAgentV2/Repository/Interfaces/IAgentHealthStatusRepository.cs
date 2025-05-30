@@ -1,9 +1,9 @@
 ﻿using SysAgentV2.DTOs;
 using SysAgentV2.Models;
 
-namespace SysAgentV2.Services.Interfaces
+namespace SysAgentV2.Repository.Interfaces
 {
-    public interface IAgentHealthStatusService
+    public interface IAgentHealthStatusRepository
     {
         Task<AgentHealthStatus?> GetHealthStatusAsync();
         Task<bool> ActivateAgentAsync();

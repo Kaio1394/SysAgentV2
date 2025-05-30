@@ -11,8 +11,8 @@ using SysAgentV2.Data;
 namespace SysAgentV2.Migrations
 {
     [DbContext(typeof(SysDbContext))]
-    [Migration("20250528155413_FirstMigrations")]
-    partial class FirstMigrations
+    [Migration("20250530145855_FirstMigration")]
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,7 +42,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 28, 15, 54, 13, 767, DateTimeKind.Utc).AddTicks(1099),
+                            CreatedAt = new DateTime(2025, 5, 30, 14, 58, 55, 837, DateTimeKind.Utc).AddTicks(7890),
                             Status = "STOPPED"
                         });
                 });
@@ -69,7 +69,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 28, 15, 54, 13, 767, DateTimeKind.Utc).AddTicks(5436),
+                            CreatedAt = new DateTime(2025, 5, 30, 14, 58, 55, 837, DateTimeKind.Utc).AddTicks(8009),
                             HealthStatus = "DISABLED"
                         });
                 });

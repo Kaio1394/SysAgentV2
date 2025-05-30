@@ -1,6 +1,6 @@
 ﻿namespace SysAgentV2.Enum
 {
-    public enum AgentHealthStatus
+    public enum HealthStatus
     {
         DISABLED = 1,
         ACTIVE = 2

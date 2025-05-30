@@ -14,6 +14,7 @@ namespace SysAgentV2.Data
         public DbSet<ScripFile> ScripFile { get; set; }
         public DbSet<Schedule> Schedule { get; set; }
         public DbSet<ScheduleScripts> ScheduleScripts { get; set; }
+        public DbSet<AgentHealthStatus> AgentHealthStatus { get; set; }
 
         // To input data to database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,7 +34,7 @@ namespace SysAgentV2.Data
                 new AgentHealthStatus
                 {
                     Id = 1,
-                    HealthStatus = Enum.AgentHealthStatus.DISABLED.ToString(),
+                    HealthStatus = Enum.HealthStatus.DISABLED.ToString(),
                     CreatedAt = DateTime.UtcNow
                 }
             );

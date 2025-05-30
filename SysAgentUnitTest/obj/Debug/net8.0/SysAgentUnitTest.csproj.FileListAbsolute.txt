@@ -372,3 +372,4 @@ C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\System.
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.ServiceProcess.ServiceController.dll
+C:\Users\kaios\source\repos\SysAgentV2\SysAgentUnitTest\bin\Debug\net8.0\Serilog.Expressions.dll

@@ -2377,6 +2377,22 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Serilog.Expressions/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "4.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Serilog.Expressions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.Expressions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Serilog.Extensions.Hosting/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -3363,6 +3379,7 @@
           "Microsoft.Extensions.Logging": "9.0.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.12",
           "Serilog.AspNetCore": "9.0.0",
+          "Serilog.Expressions": "5.0.0",
           "Swashbuckle.AspNetCore": "6.5.0",
           "System.ServiceProcess.ServiceController": "9.0.5"
         },
@@ -7260,6 +7277,29 @@
         "lib/netstandard2.1/Serilog.AspNetCore.xml",
         "serilog.aspnetcore.9.0.0.nupkg.sha512",
         "serilog.aspnetcore.nuspec"
+      ]
+    },
+    "Serilog.Expressions/5.0.0": {
+      "sha512": "QhZjXtUcA2QfQRA60m+DfyIfidKsQV7HBstbYEDqzJKMbJH/KnKthkkjciRuYrmFE+scWv1JibC5LlXrdtOUmw==",
+      "type": "package",
+      "path": "serilog.expressions/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.Expressions.dll",
+        "lib/net462/Serilog.Expressions.xml",
+        "lib/net471/Serilog.Expressions.dll",
+        "lib/net471/Serilog.Expressions.xml",
+        "lib/net6.0/Serilog.Expressions.dll",
+        "lib/net6.0/Serilog.Expressions.xml",
+        "lib/net8.0/Serilog.Expressions.dll",
+        "lib/net8.0/Serilog.Expressions.xml",
+        "lib/netstandard2.0/Serilog.Expressions.dll",
+        "lib/netstandard2.0/Serilog.Expressions.xml",
+        "serilog.expressions.5.0.0.nupkg.sha512",
+        "serilog.expressions.nuspec"
       ]
     },
     "Serilog.Extensions.Hosting/9.0.0": {
