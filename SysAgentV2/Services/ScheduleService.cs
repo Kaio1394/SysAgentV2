@@ -16,9 +16,27 @@ namespace SysAgentV2.Services
             return await _scheduleRepository.CreateScheduleAsync(schedule);
         }
 
+        public async Task<bool> DeleteScheduleByUuidAsync(string uuid)
+        {
+            var schedule = await _scheduleRepository.GetScheduleByUuidAsync(uuid);
+            if (schedule == null)
+                return false;
+            return await _scheduleRepository.DeleteScheduleAsync(schedule);
+        }
+
         public async Task<IEnumerable<Schedule>> GetAllScheduleAsync()
         {
             return await _scheduleRepository.GetAllScheduleAsync();
+        }
+
+        public async Task<Schedule> GetScheduleByTagAsync(string tag)
+        {
+            return await _scheduleRepository.GetScheduleByTagAsync(tag);
+        }
+
+        public async Task<Schedule> GetScheduleByUuidAsync(string uuid)
+        {
+            return await _scheduleRepository.GetScheduleByUuidAsync(uuid);
         }
     }
 }

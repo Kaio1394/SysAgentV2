@@ -7,9 +7,9 @@ namespace SysAgentV2.Repository.Interfaces
     {
         Task<Schedule> CreateScheduleAsync(Schedule schedule);
         Task<Schedule> UpdateScheduleAsync(Schedule schedule);
-        Task<Schedule> GetScheduleUuidAsync(string uuid);
+        Task<Schedule> GetScheduleByUuidAsync(string uuid);
         Task<Schedule> GetScheduleByTagAsync(string tag);
         Task<IEnumerable<Schedule>> GetAllScheduleAsync();
-        Task<bool> DeleteScheduleAsync(string uuid);
+        Task<bool> DeleteScheduleAsync(Schedule schedule);
     }
 }

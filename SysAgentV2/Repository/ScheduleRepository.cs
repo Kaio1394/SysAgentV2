@@ -19,9 +19,11 @@ namespace SysAgentV2.Repository
             return schedule;
         }
 
-        public Task<bool> DeleteScheduleAsync(string uuid)
+        public async Task<bool> DeleteScheduleAsync(Schedule schedule)
         {
-            throw new NotImplementedException();
+            _context.Schedule.Remove(schedule);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<IEnumerable<Schedule>> GetAllScheduleAsync()
@@ -29,14 +31,14 @@ namespace SysAgentV2.Repository
             return await _context.Schedule.ToListAsync();
         }
 
-        public Task<Schedule> GetScheduleByTagAsync(string tag)
+        public async Task<Schedule> GetScheduleByTagAsync(string tag)
         {
-            throw new NotImplementedException();
+            return await _context.Schedule.FirstOrDefaultAsync(x => tag == x.TagSchedule);
         }
 
-        public Task<Schedule> GetScheduleUuidAsync(string uuid)
+        public async Task<Schedule> GetScheduleByUuidAsync(string uuid)
         {
-            throw new NotImplementedException();
+            return await _context.Schedule.FirstOrDefaultAsync(x => uuid == x.Uuid);
         }
 
         public Task<Schedule> UpdateScheduleAsync(Schedule schedule)

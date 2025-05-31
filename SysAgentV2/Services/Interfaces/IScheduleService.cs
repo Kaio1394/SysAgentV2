@@ -6,5 +6,8 @@ namespace SysAgentV2.Services.Interfaces
     {
         Task<Schedule> CreateScheduleAsync(Schedule schedule);
         Task<IEnumerable<Schedule>> GetAllScheduleAsync();
+        Task<Schedule> GetScheduleByTagAsync(string tag);
+        Task<Schedule> GetScheduleByUuidAsync(string uuid);
+        Task<bool> DeleteScheduleByUuidAsync(string uuid);
     }
 }
