@@ -18,31 +18,42 @@ namespace SysAgentV2.Worker
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            using (var scope = _scopeFactory.CreateScope())
+            while (!stoppingToken.IsCancellationRequested)
             {
-                var dbContext = scope.ServiceProvider.GetRequiredService<SysDbContext>();
-                var helper = scope.ServiceProvider.GetRequiredService<IHelper>();
-
-                while (!stoppingToken.IsCancellationRequested)
+                using (var scope = _scopeFactory.CreateScope())
                 {
+                    var dbContext = scope.ServiceProvider.GetRequiredService<SysDbContext>();
+                    var helper = scope.ServiceProvider.GetRequiredService<IHelper>();
+
+                    var healthStatus = dbContext.AgentHealthStatus.FirstOrDefault(x => x.Id == 1);
+                    if (healthStatus == null)
+                    {
+                        _logger.LogError($"Table[{nameof(dbContext.AgentHealthStatus)}] is empty.");
+                        break;
+                    }
+
                     var statusModel = dbContext.AgentStatus.FirstOrDefault(x => x.Id == 1);
-                    if(statusModel == null)
+                    if (statusModel == null)
                     {
                         _logger.LogError($"Table[{nameof(dbContext.AgentStatus)}] is empty.");
                         break;
                     }
-                    _logger.LogInformation($"Checking agent status collect data: {statusModel.Status}");
 
-                    var status = statusModel.Status;
-                    if (status == ExecutionStatus.RUNNING.ToString())
+                    _logger.LogInformation($"Checking agent status collect data: {nameof(dbContext.AgentStatus)} = {statusModel.Status}; " +
+                        $"{nameof(dbContext.AgentHealthStatus)} = {healthStatus.HealthStatus}");
+
+                    if (statusModel.Status == ExecutionStatus.RUNNING.ToString() &&
+                        healthStatus.HealthStatus == HealthStatus.ACTIVE.ToString())
                     {
                         var infoHardware = await helper.GetHardwareInfoAsync();
                         var json = JsonSerializer.Serialize(infoHardware, new JsonSerializerOptions { WriteIndented = true });
                         _logger.LogInformation(json);
                     }
-                    await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);
                 }
+
+                await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);
             }
         }
+
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SysAgentV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0130d3f9d2f98a83bfb51d3e1dfa699bf44d9e0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b275391622199a6720ee77f1d0dfa833c542ef0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SysAgentV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SysAgentV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
