@@ -49,6 +49,8 @@ builder.Services.AddScoped<IAgentHealthStatusRepository, AgentHealthStatusReposi
 builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
 builder.Services.AddScoped<IScheduleService, ScheduleService>();
 
+builder.Services.AddScoped<IScheduleScriptsRepository, ScheduleScriptsRepository>();
+builder.Services.AddScoped<IScheduleScriptsService, ScheduleScriptsService>();
 
 builder.Services.AddScoped<IHelper, Helper>();
 builder.Services.AddScoped<IAgentHardwareInfo, AgentHardwareInfo>();

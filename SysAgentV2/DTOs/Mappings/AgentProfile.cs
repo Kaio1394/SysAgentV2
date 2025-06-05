@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SysAgentV2.Models;
+using SysAgentV2.Models.Schedulling;
 
 namespace SysAgentV2.DTOs.Mappings
 {
@@ -7,7 +8,8 @@ namespace SysAgentV2.DTOs.Mappings
     {
         public AgentProfile()
         {
-            CreateMap<AgentExecutionStatus, AgentExecutionStatusDto>();
+            CreateMap<AgentExecutionStatus, AgentExecutionStatusDto>().ReverseMap();
+            CreateMap<ScheduleScripts, ScheduleScriptsDto>().ReverseMap();
         }
     }
 }

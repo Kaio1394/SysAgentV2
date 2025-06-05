@@ -17,7 +17,7 @@ namespace SysAgentV2.Controllers
         }
 
         [HttpGet("log/server/{logName}/{date}/{lastOneLogs}")]
-        public async Task<IActionResult> KillService([FromRoute] string logName, [FromRoute] string date, [FromRoute] string lastOneLogs)
+        public async Task<IActionResult> GetEnventViewer([FromRoute] string logName, [FromRoute] string date, [FromRoute] string lastOneLogs)
         {
             var listEvenViewr = await _helper.GetEventViewList(logName, date, lastOneLogs);
             return Ok(listEvenViewr);
