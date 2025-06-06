@@ -70,6 +70,12 @@ builder.Services.AddCors(options =>
                         .AllowAnyMethod());
 });
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5223); 
+    options.ListenAnyIP(7075, listen => listen.UseHttps()); 
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
