@@ -1,1 +1,24 @@
+# Build
+bin/
+obj/
+
+# Tests
+TestResults/
+coveragereport/
+
+# Database
+*.db-shm
+*.db-wal
+
+# Logs
+log/
+logs/
+Logs/
+
+# Visual Studio
+*.user
+*.suo
+*.cache
+*.log
+*.vs/*
 .vs/

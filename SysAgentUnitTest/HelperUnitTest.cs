@@ -1,6 +1,7 @@
 using Moq;
 using SysAgentV2.Helpers;
 using SysAgentV2.Helpers.Interfaces;
+using SysAgentV2.Models.Infos;
 
 namespace SysAgentUnitTest
 {
@@ -9,6 +10,8 @@ namespace SysAgentUnitTest
         private Helper _helper;
         private Mock<IAgentHardwareInfo> _mockHardwareInfo;
         const uint CPU_USAGE = 80;
+        const long FREE_SPACE = 350;
+        const long TOTAL_SPACE = 1000;
         const string PROCESSOR_NAME = "Test Processor Name";
         const int QTY_CORE = 12;
 
@@ -16,32 +19,39 @@ namespace SysAgentUnitTest
         public void Setup()
         {
             _mockHardwareInfo = new Mock<IAgentHardwareInfo>();
-            _mockHardwareInfo.Setup(x => x.GetProcessorName()).Returns(PROCESSOR_NAME);
-            _mockHardwareInfo.Setup(x => x.GetCpuFrequency()).Returns(12);
-            _mockHardwareInfo.Setup(x => x.GetCpuUsage()).Returns(CPU_USAGE);
-            _mockHardwareInfo.Setup(x => x.GetQtyCore()).Returns(QTY_CORE);
+            _mockHardwareInfo.Setup(h => h.GetInfoCpu()).Returns(new Cpu { UsagePercent = CPU_USAGE });
+            _mockHardwareInfo.Setup(h => h.GetInfoDisk()).Returns(new List<Disk>
+            {
+                new Disk 
+                { 
+                    Name = "C://", 
+                    Info = new DictionaryInfoDisk
+                    {
+                        FreeSpace = FREE_SPACE,
+                        TotalSpace = TOTAL_SPACE,
+                        UsedSpace = TOTAL_SPACE - FREE_SPACE
+                    }
+                }
+            });
+            _helper = new Helper(_mockHardwareInfo.Object);
         }
 
-        //[Test]
-        //public async Task GetNameProcessor_WhenCalled_ReturnsProcessorName()
-        //{         
-        //    _helper = new Helper(_mockHardwareInfo.Object);
-        //    var result = await _helper.GetNameProcessorAsync();
-        //    Assert.AreEqual(result, PROCESSOR_NAME);
-        //}
-        //[Test]
-        //public async Task GetGetCpuUsage_WhenCalled_ReturnsCpuUsage()
-        //{
-        //    _helper = new Helper(_mockHardwareInfo.Object);
-        //    var result = await _helper.GetCpuUsageAsync();
-        //    Assert.AreEqual(result, CPU_USAGE);
-        //}
-        //[Test]
-        //public async Task GetGetQtyCore_WhenCalled_ReturnsQtyCore()
-        //{
-        //    _helper = new Helper(_mockHardwareInfo.Object);
-        //    var result = await _helper.GetQtyCoreAsync();
-        //    Assert.AreEqual(result, QTY_CORE);
-        //}
+        [Test]
+        public async Task GetGetCpuUsage_WhenCalled_ReturnsCpuUsage()
+        {
+            var result = await _helper.GetInfoCpuAsync();
+            Assert.IsNotNull(result); 
+            Assert.AreEqual(CPU_USAGE, result.UsagePercent);
+        }
+        [Test]
+        public async Task GetDiskInfo_WhenCalled_ReturnsListDiskInfo()
+        {
+            List<Disk>? result = await _helper.GetInfoDiskAsync();
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count > 0);
+            Assert.AreEqual(result[0].Info.FreeSpace, FREE_SPACE);
+            Assert.AreEqual(result[0].Info.TotalSpace, TOTAL_SPACE);
+            Assert.AreEqual(result[0].Info.UsedSpace, TOTAL_SPACE - FREE_SPACE);
+        }
     }
 }
