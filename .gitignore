@@ -1,6 +1,8 @@
 # Build
-bin/
-obj/
+/SysAgentV2/bin/
+/SysAgentUnitTest/bin/
+/SysAgentV2/obj/
+/SysAgentUnitTest/obj/
 
 # Tests
 TestResults/
