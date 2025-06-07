@@ -2,6 +2,8 @@
 using SysAgentV2.Data;
 using SysAgentV2.Enum;
 using SysAgentV2.Helpers.Interfaces;
+using SysAgentV2.Repository.Interfaces;
+using SysAgentV2.Services.Interfaces;
 using System.Text.Json;
 
 namespace SysAgentV2.Worker
@@ -24,6 +26,7 @@ namespace SysAgentV2.Worker
                 {
                     var dbContext = scope.ServiceProvider.GetRequiredService<SysDbContext>();
                     var helper = scope.ServiceProvider.GetRequiredService<IHelper>();
+                    var serviceMetrics = scope.ServiceProvider.GetRequiredService<ICollectMetricsService>();
 
                     var healthStatus = dbContext.AgentHealthStatus.FirstOrDefault(x => x.Id == 1);
                     if (healthStatus == null)
@@ -46,7 +49,12 @@ namespace SysAgentV2.Worker
                         healthStatus.HealthStatus == HealthStatus.ACTIVE.ToString())
                     {
                         var infoHardware = await helper.GetHardwareInfoAsync();
+
                         var json = JsonSerializer.Serialize(infoHardware, new JsonSerializerOptions { WriteIndented = true });
+                        await serviceMetrics.InsertInfoHardwareAsync(new Models.CollectMetrics
+                        {
+                            JsonResult = json
+                        });
                         _logger.LogInformation(json);
                     }
                 }

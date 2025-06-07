@@ -1,33 +1,28 @@
-﻿using SysAgentV2.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SysAgentV2.Data;
+using SysAgentV2.Models;
 using SysAgentV2.Repository.Interfaces;
 
 namespace SysAgentV2.Repository
 {
     public class CollectMetricsRepository : ICollectMetricsRepository
     {
-        public Task<IEnumerable<CollectMetrics>> GetAllMetricDataAsync()
+        private readonly SysDbContext _dbContext;
+
+        public CollectMetricsRepository(SysDbContext dbContext)
         {
-            throw new NotImplementedException();
+            _dbContext = dbContext;
+        }
+        public async Task<IEnumerable<CollectMetrics>> GetAllMetricDataAsync()
+        {
+            return await _dbContext.CollectMetrics.ToListAsync();
         }
 
-        public Task<CollectMetrics> GetMetricByDateAsync(DateTime date)
+        public async Task<bool> InsertInfoHardwareAsync(CollectMetrics metric)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<CollectMetrics> InsertInfoHardwareAsync(CollectMetrics metric)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PurgeDataAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PurgeMetricDataBeforeDateAsync(DateTime date)
-        {
-            throw new NotImplementedException();
+            await _dbContext.CollectMetrics.AddAsync(metric);
+            await _dbContext.SaveChangesAsync();
+            return true;
         }
     }
 }

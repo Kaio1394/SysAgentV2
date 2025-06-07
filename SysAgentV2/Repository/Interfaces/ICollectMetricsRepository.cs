@@ -5,10 +5,7 @@ namespace SysAgentV2.Repository.Interfaces
 {
     public interface ICollectMetricsRepository
     {
+        Task<bool> InsertInfoHardwareAsync(CollectMetrics metric);
         Task<IEnumerable<CollectMetrics>> GetAllMetricDataAsync();
-        Task<CollectMetrics> GetMetricByDateAsync(DateTime date);
-        Task<CollectMetrics> InsertInfoHardwareAsync(CollectMetrics metric);
-        Task PurgeDataAsync();
-        Task PurgeMetricDataBeforeDateAsync(DateTime date);
     }
 }

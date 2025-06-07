@@ -17,8 +17,7 @@ namespace SysAgentV2.Migrations
                 {
                     uuid = table.Column<string>(type: "TEXT", nullable: false),
                     json_result = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    created_at = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "TEXT", nullable: true)
+                    collect_at = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -132,12 +131,12 @@ namespace SysAgentV2.Migrations
             migrationBuilder.InsertData(
                 table: "t_status_agent",
                 columns: new[] { "Id", "edited_at", "status" },
-                values: new object[] { 1, new DateTime(2025, 5, 30, 14, 58, 55, 837, DateTimeKind.Utc).AddTicks(7890), "STOPPED" });
+                values: new object[] { 1, new DateTime(2025, 6, 7, 13, 29, 49, 605, DateTimeKind.Utc).AddTicks(7200), "STOPPED" });
 
             migrationBuilder.InsertData(
                 table: "t_status_health",
                 columns: new[] { "Id", "edited_at", "health_status" },
-                values: new object[] { 1, new DateTime(2025, 5, 30, 14, 58, 55, 837, DateTimeKind.Utc).AddTicks(8009), "DISABLED" });
+                values: new object[] { 1, new DateTime(2025, 6, 7, 13, 29, 49, 605, DateTimeKind.Utc).AddTicks(7290), "DISABLED" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_t_schedule_scripts_cmd_schedule_uuid",

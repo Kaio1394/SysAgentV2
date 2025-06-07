@@ -39,7 +39,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 30, 14, 58, 55, 837, DateTimeKind.Utc).AddTicks(7890),
+                            CreatedAt = new DateTime(2025, 6, 7, 13, 29, 49, 605, DateTimeKind.Utc).AddTicks(7200),
                             Status = "STOPPED"
                         });
                 });
@@ -66,7 +66,7 @@ namespace SysAgentV2.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 30, 14, 58, 55, 837, DateTimeKind.Utc).AddTicks(8009),
+                            CreatedAt = new DateTime(2025, 6, 7, 13, 29, 49, 605, DateTimeKind.Utc).AddTicks(7290),
                             HealthStatus = "DISABLED"
                         });
                 });
@@ -77,19 +77,15 @@ namespace SysAgentV2.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("uuid");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("CollectdAt")
                         .HasColumnType("TEXT")
-                        .HasColumnName("created_at");
+                        .HasColumnName("collect_at");
 
                     b.Property<string>("JsonResult")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT")
                         .HasColumnName("json_result");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("updated_at");
 
                     b.HasKey("Uuid");
 
