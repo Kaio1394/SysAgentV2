@@ -2,9 +2,11 @@
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using SysAgentV2.Models.Schedulling;
 using SysAgentV2.Services.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Controllers
 {
+    [ExcludeFromCodeCoverage]
     [ApiController]
     [Route("api/[controller]")]
     public class ScheduleController : Controller

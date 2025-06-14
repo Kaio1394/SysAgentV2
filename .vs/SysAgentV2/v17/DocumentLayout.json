@@ -3,16 +3,104 @@
   "WorkspaceRootPath": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\repository\\agentexecutionstatusrepositoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\repository\\agentexecutionstatusrepositoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\actionsservercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\actionsservercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\coverlet.runsettings||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\coverlet.runsettings||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\schedulescriptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\schedulescriptscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\infohardwarecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\infohardwarecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\eventviewerservercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\eventviewerservercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\collectmetriccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\collectmetriccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\agentscriptscmdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\agentscriptscmdcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\agenthealthstatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\agenthealthstatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\controllers\\agentexecutionstatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\controllers\\agentexecutionstatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\generatecoveragetest.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\generatecoveragetest.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\coveragetest.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\coveragetest.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\coverlet.runsettings||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\coverlet.runsettings||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\service\\collectmetricsserviceunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\service\\collectmetricsserviceunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\mock\\constantsmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\mock\\constantsmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\mock\\dbsetmockhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\mock\\dbsetmockhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\mock\\systemmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\mock\\systemmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\models\\infos\\cpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\models\\infos\\cpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\models\\collectmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\models\\collectmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\service\\agentexecutionstatusserviceunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\service\\agentexecutionstatusserviceunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\logs\\sysagent-2025061401.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\logs\\sysagent-2025061401.log||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\services\\collectmetricsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\services\\collectmetricsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\services\\agentexecutionstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\services\\agentexecutionstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\repository\\agentexecutionstatusrepositoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\repository\\agentexecutionstatusrepositoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\repository\\agentscriptcmdrepositoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\repository\\agentscriptcmdrepositoryunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\repository\\agentscriptcmdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\repository\\agentscriptcmdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\repository\\agenthealthstatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\repository\\agentexecutionstatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\repository\\agentexecutionstatusrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentunittest\\mock\\dbsetmockhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3184963C-1FFC-4B01-A31F-2A9D01019994}|SysAgentUnitTest\\SysAgentUnitTest.csproj|solutionrelative:sysagentunittest\\mock\\dbsetmockhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\data\\isysdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,10 +135,6 @@
       "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\repository\\collectmetricsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\repository\\agentscriptcmdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\repository\\agentscriptcmdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|c:\\users\\kaios\\source\\repos\\sysagentv2\\sysagentv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4AE8CD5-A9A9-4DA3-9F79-9D53ABBF8377}|SysAgentV2\\SysAgentV2.csproj|solutionrelative:sysagentv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -70,11 +150,206 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ScheduleScriptsController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\ScheduleScriptsController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\ScheduleScriptsController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\ScheduleScriptsController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\ScheduleScriptsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:15:10.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ScheduleController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\ScheduleController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\ScheduleController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\ScheduleController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\ScheduleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:15:06.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InfoHardwareController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\InfoHardwareController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\InfoHardwareController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\InfoHardwareController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\InfoHardwareController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:15:02.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EventViewerServerController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\EventViewerServerController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\EventViewerServerController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\EventViewerServerController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\EventViewerServerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:14:58.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CollectMetricController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\CollectMetricController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\CollectMetricController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\CollectMetricController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\CollectMetricController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:14:54.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "coverlet.runsettings",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\coverlet.runsettings",
+              "RelativeDocumentMoniker": "SysAgentUnitTest\\coverlet.runsettings",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\coverlet.runsettings",
+              "RelativeToolTip": "SysAgentUnitTest\\coverlet.runsettings",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-14T14:07:04.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ActionsServerController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\ActionsServerController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\ActionsServerController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\ActionsServerController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\ActionsServerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:14:33.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AgentScriptsCmdController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\AgentScriptsCmdController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\AgentScriptsCmdController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\AgentScriptsCmdController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\AgentScriptsCmdController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:14:50.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AgentHealthStatusController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\AgentHealthStatusController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\AgentHealthStatusController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\AgentHealthStatusController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\AgentHealthStatusController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:14:46.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AgentExecutionStatusController.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\AgentExecutionStatusController.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Controllers\\AgentExecutionStatusController.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Controllers\\AgentExecutionStatusController.cs",
+              "RelativeToolTip": "SysAgentV2\\Controllers\\AgentExecutionStatusController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:14:42.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "coverlet.runsettings",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\coverlet.runsettings",
+              "RelativeDocumentMoniker": "SysAgentUnitTest\\coverlet.runsettings",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\coverlet.runsettings",
+              "RelativeToolTip": "SysAgentUnitTest\\coverlet.runsettings",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-14T14:01:33.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Cpu.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Models\\Infos\\Cpu.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Models\\Infos\\Cpu.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Models\\Infos\\Cpu.cs",
+              "RelativeToolTip": "SysAgentV2\\Models\\Infos\\Cpu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:45:57.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SystemMetrics.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Mock\\SystemMetrics.cs",
+              "RelativeDocumentMoniker": "SysAgentUnitTest\\Mock\\SystemMetrics.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Mock\\SystemMetrics.cs",
+              "RelativeToolTip": "SysAgentUnitTest\\Mock\\SystemMetrics.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:45:25.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CollectMetrics.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Models\\CollectMetrics.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Models\\CollectMetrics.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Models\\CollectMetrics.cs",
+              "RelativeToolTip": "SysAgentV2\\Models\\CollectMetrics.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:44:27.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ConstantsMock.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Mock\\ConstantsMock.cs",
+              "RelativeDocumentMoniker": "SysAgentUnitTest\\Mock\\ConstantsMock.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Mock\\ConstantsMock.cs",
+              "RelativeToolTip": "SysAgentUnitTest\\Mock\\ConstantsMock.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:39:55.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "GenerateCoverageTest.bat",
               "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\GenerateCoverageTest.bat",
               "RelativeDocumentMoniker": "SysAgentUnitTest\\GenerateCoverageTest.bat",
@@ -87,20 +362,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CoverageTest.txt",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\CoverageTest.txt",
-              "RelativeDocumentMoniker": "SysAgentUnitTest\\CoverageTest.txt",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\CoverageTest.txt",
-              "RelativeToolTip": "SysAgentUnitTest\\CoverageTest.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-06-14T05:24:51.312Z",
+              "DocumentIndex": 19,
+              "Title": "SysAgent-2025061401.log",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Logs\\SysAgent-2025061401.log",
+              "RelativeDocumentMoniker": "SysAgentV2\\Logs\\SysAgent-2025061401.log",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Logs\\SysAgent-2025061401.log",
+              "RelativeToolTip": "SysAgentV2\\Logs\\SysAgent-2025061401.log",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-14T13:35:46.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
+              "Title": "CollectMetricsServiceUnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Service\\CollectMetricsServiceUnitTest.cs",
+              "RelativeDocumentMoniker": "SysAgentUnitTest\\Service\\CollectMetricsServiceUnitTest.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Service\\CollectMetricsServiceUnitTest.cs",
+              "RelativeToolTip": "SysAgentUnitTest\\Service\\CollectMetricsServiceUnitTest.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwDcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:28:52.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CollectMetricsService.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Services\\CollectMetricsService.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Services\\CollectMetricsService.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Services\\CollectMetricsService.cs",
+              "RelativeToolTip": "SysAgentV2\\Services\\CollectMetricsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:28:24.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "DbSetMockHelper.cs",
               "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Mock\\DbSetMockHelper.cs",
               "RelativeDocumentMoniker": "SysAgentUnitTest\\Mock\\DbSetMockHelper.cs",
@@ -113,33 +414,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 21,
+              "Title": "AgentExecutionStatusService.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Services\\AgentExecutionStatusService.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Services\\AgentExecutionStatusService.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Services\\AgentExecutionStatusService.cs",
+              "RelativeToolTip": "SysAgentV2\\Services\\AgentExecutionStatusService.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAWwBQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:15:25.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AgentExecutionStatusServiceUnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Service\\AgentExecutionStatusServiceUnitTest.cs",
+              "RelativeDocumentMoniker": "SysAgentUnitTest\\Service\\AgentExecutionStatusServiceUnitTest.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Service\\AgentExecutionStatusServiceUnitTest.cs",
+              "RelativeToolTip": "SysAgentUnitTest\\Service\\AgentExecutionStatusServiceUnitTest.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAUwDYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:12:08.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AgentScriptCmdRepositoryUnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Repository\\AgentScriptCmdRepositoryUnitTest.cs",
+              "RelativeDocumentMoniker": "SysAgentUnitTest\\Repository\\AgentScriptCmdRepositoryUnitTest.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Repository\\AgentScriptCmdRepositoryUnitTest.cs",
+              "RelativeToolTip": "SysAgentUnitTest\\Repository\\AgentScriptCmdRepositoryUnitTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T05:36:51.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "AgentExecutionStatusRepositoryUnitTest.cs",
               "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Repository\\AgentExecutionStatusRepositoryUnitTest.cs",
               "RelativeDocumentMoniker": "SysAgentUnitTest\\Repository\\AgentExecutionStatusRepositoryUnitTest.cs",
               "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentUnitTest\\Repository\\AgentExecutionStatusRepositoryUnitTest.cs",
               "RelativeToolTip": "SysAgentUnitTest\\Repository\\AgentExecutionStatusRepositoryUnitTest.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBcAAAAoAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T04:39:55.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ISysDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Data\\ISysDbContext.cs",
-              "RelativeDocumentMoniker": "SysAgentV2\\Data\\ISysDbContext.cs",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Data\\ISysDbContext.cs",
-              "RelativeToolTip": "SysAgentV2\\Data\\ISysDbContext.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAvwBAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T04:35:16.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 25,
               "Title": "AgentHealthStatusRepository.cs",
               "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\AgentHealthStatusRepository.cs",
               "RelativeDocumentMoniker": "SysAgentV2\\Repository\\AgentHealthStatusRepository.cs",
@@ -152,85 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AgentExecutionStatusRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
-              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
-              "RelativeToolTip": "SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAD4vyAAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T04:37:33.874Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ScheduleWorkder.cs",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\ScheduleWorkder.cs",
-              "RelativeDocumentMoniker": "SysAgentV2\\Worker\\ScheduleWorkder.cs",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\ScheduleWorkder.cs",
-              "RelativeToolTip": "SysAgentV2\\Worker\\ScheduleWorkder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T04:38:24.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StatusCollectDataWorker.cs",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
-              "RelativeDocumentMoniker": "SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
-              "RelativeToolTip": "SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T04:38:41.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ScheduleScriptsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
-              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
-              "RelativeToolTip": "SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAA5wBwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T04:37:57.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ScheduleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleRepository.cs",
-              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\ScheduleRepository.cs",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleRepository.cs",
-              "RelativeToolTip": "SysAgentV2\\Repository\\ScheduleRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T04:37:51.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CollectMetricsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\CollectMetricsRepository.cs",
-              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\CollectMetricsRepository.cs",
-              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\CollectMetricsRepository.cs",
-              "RelativeToolTip": "SysAgentV2\\Repository\\CollectMetricsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T04:37:46.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "AgentScriptCmdRepository.cs",
               "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\AgentScriptCmdRepository.cs",
               "RelativeDocumentMoniker": "SysAgentV2\\Repository\\AgentScriptCmdRepository.cs",
@@ -243,20 +492,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 27,
+              "Title": "ISysDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Data\\ISysDbContext.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Data\\ISysDbContext.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Data\\ISysDbContext.cs",
+              "RelativeToolTip": "SysAgentV2\\Data\\ISysDbContext.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAvwBAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:35:16.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AgentExecutionStatusRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
+              "RelativeToolTip": "SysAgentV2\\Repository\\AgentExecutionStatusRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAD4vyAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:37:33.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ScheduleWorkder.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\ScheduleWorkder.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Worker\\ScheduleWorkder.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\ScheduleWorkder.cs",
+              "RelativeToolTip": "SysAgentV2\\Worker\\ScheduleWorkder.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:38:24.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "StatusCollectDataWorker.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
+              "RelativeToolTip": "SysAgentV2\\Worker\\StatusCollectDataWorker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:38:41.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ScheduleScriptsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
+              "RelativeToolTip": "SysAgentV2\\Repository\\ScheduleScriptsRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:37:57.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ScheduleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleRepository.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\ScheduleRepository.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\ScheduleRepository.cs",
+              "RelativeToolTip": "SysAgentV2\\Repository\\ScheduleRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:37:51.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CollectMetricsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\CollectMetricsRepository.cs",
+              "RelativeDocumentMoniker": "SysAgentV2\\Repository\\CollectMetricsRepository.cs",
+              "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Repository\\CollectMetricsRepository.cs",
+              "RelativeToolTip": "SysAgentV2\\Repository\\CollectMetricsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T04:37:46.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Program.cs",
               "RelativeDocumentMoniker": "SysAgentV2\\Program.cs",
               "ToolTip": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Program.cs",
               "RelativeToolTip": "SysAgentV2\\Program.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADkAAAAoAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAIBJwDkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T04:36:02.419Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 34,
               "Title": "SysDbContext.cs",
               "DocumentMoniker": "C:\\Users\\kaios\\source\\repos\\SysAgentV2\\SysAgentV2\\Data\\SysDbContext.cs",
               "RelativeDocumentMoniker": "SysAgentV2\\Data\\SysDbContext.cs",

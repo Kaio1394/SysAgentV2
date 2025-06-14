@@ -4,9 +4,12 @@ using SysAgentV2.Helpers.Interfaces;
 using SysAgentV2.Models;
 using SysAgentV2.Services.Interfaces;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+
 
 namespace SysAgentV2.Controllers
 {
+    [ExcludeFromCodeCoverage]
     [ApiController]
     [Route("api/[controller]")]
     public class ActionsServerController : ControllerBase

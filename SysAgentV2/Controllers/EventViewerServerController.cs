@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using SysAgentV2.Helpers.Interfaces;
 using SysAgentV2.Models;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Controllers
 {
+    [ExcludeFromCodeCoverage]
     [ApiController]
     [Route("api/[controller]")]
     public class EventViewerServerController : ControllerBase

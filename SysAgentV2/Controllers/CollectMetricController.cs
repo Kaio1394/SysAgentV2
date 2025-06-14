@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SysAgentV2.Services.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Controllers
 {
+    [ExcludeFromCodeCoverage]
     [ApiController]
     [Route("api/[controller]")]
     public class CollectMetricController : Controller

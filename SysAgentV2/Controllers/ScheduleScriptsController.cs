@@ -2,9 +2,11 @@
 using SysAgentV2.DTOs;
 using SysAgentV2.Models.Schedulling;
 using SysAgentV2.Services.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Controllers
 {
+    [ExcludeFromCodeCoverage]
     [ApiController]
     [Route("api/[controller]")]
     public class ScheduleScriptsController : Controller
