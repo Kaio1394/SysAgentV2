@@ -19,38 +19,38 @@ namespace SysAgentUnitTest.Repository
 {
     public class AgentExecutionStatusRepositoryUnitTest
     {
-        //private Mock<ISysDbContext> _dbContext;
-        //private AgentExecutionStatusRepository _repository;
-        //private DateTime _createdAt;  
+        private Mock<ISysDbContext> _dbContext;
+        private AgentExecutionStatusRepository _repository;
+        private DateTime _createdAt;
 
-        //[SetUp]
-        //public void Setup()
-        //{
-        //    DateTime.TryParse("1990-01-01", out _createdAt);
-        //    var data = new List<AgentExecutionStatus>
-        //    {
-        //        new AgentExecutionStatus
-        //        {
-        //            CreatedAt = _createdAt,
-        //            Id = 1,
-        //            Status = "RUNNING"
-        //        }
-        //    };
-        //    var mockSet = DbSetMockHelper.CreateMockSet<AgentExecutionStatus>(data);
+        [SetUp]
+        public void Setup()
+        {
+            DateTime.TryParse("1990-01-01", out _createdAt);
+            var data = new List<AgentExecutionStatus>
+            {
+                new AgentExecutionStatus
+                {
+                    CreatedAt = _createdAt,
+                    Id = 1,
+                    Status = "RUNNING"
+                }
+            };
+            var mockSet = DbSetMockHelper.CreateMockSet<AgentExecutionStatus>(data);
 
-        //    _dbContext = new Mock<ISysDbContext>();
-        //    _dbContext.Setup(x => x.AgentStatus).Returns(mockSet.Object);
-        //    _dbContext.Setup(d => d.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
-        //    _repository = new AgentExecutionStatusRepository(_dbContext.Object);
-        //}
-        //[Test]
-        //public async Task GetByIdAsync_ShouldReturnData()
-        //{
-        //    var result = await _repository.GetByIdAsync(1);
-        //    Assert.That(result, Is.Not.Null);
-        //    Assert.That(result.Id == 1);
-        //    Assert.That(result.Status == "RUNNING");
-        //    Assert.That(result.CreatedAt == _createdAt);
-        //}
+            _dbContext = new Mock<ISysDbContext>();
+            _dbContext.Setup(x => x.AgentStatus).Returns(mockSet.Object);
+            _dbContext.Setup(d => d.SaveChangesAsync(It.IsAny<CancellationToken>())).ReturnsAsync(1);
+            _repository = new AgentExecutionStatusRepository(_dbContext.Object);
+        }
+        [Test]
+        public async Task GetByIdAsync_ShouldReturnData()
+        {
+            var result = await _repository.GetByIdAsync(1);
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Id == 1);
+            Assert.That(result.Status == "RUNNING");
+            Assert.That(result.CreatedAt == _createdAt);
+        }
     }
 }
