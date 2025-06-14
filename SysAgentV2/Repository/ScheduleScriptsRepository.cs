@@ -7,8 +7,8 @@ namespace SysAgentV2.Repository
 {
     public class ScheduleScriptsRepository: IScheduleScriptsRepository
     {
-        private readonly SysDbContext _dbContext;
-        public ScheduleScriptsRepository(SysDbContext dbContext)
+        private readonly ISysDbContext _dbContext;
+        public ScheduleScriptsRepository(ISysDbContext dbContext)
         {
             _dbContext = dbContext;            
         }

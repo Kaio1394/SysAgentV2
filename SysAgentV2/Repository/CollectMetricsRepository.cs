@@ -7,9 +7,9 @@ namespace SysAgentV2.Repository
 {
     public class CollectMetricsRepository : ICollectMetricsRepository
     {
-        private readonly SysDbContext _dbContext;
+        private readonly ISysDbContext _dbContext;
 
-        public CollectMetricsRepository(SysDbContext dbContext)
+        public CollectMetricsRepository(ISysDbContext dbContext)
         {
             _dbContext = dbContext;
         }

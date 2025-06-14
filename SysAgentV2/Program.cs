@@ -55,6 +55,8 @@ builder.Services.AddScoped<IScheduleScriptsService, ScheduleScriptsService>();
 builder.Services.AddScoped<IHelper, Helper>();
 builder.Services.AddScoped<IAgentHardwareInfo, AgentHardwareInfo>();
 
+builder.Services.AddScoped<ISysDbContext, SysDbContext>();
+
 builder.Services.AddDbContext<SysDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 

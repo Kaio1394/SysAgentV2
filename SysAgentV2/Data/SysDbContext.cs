@@ -5,7 +5,7 @@ using SysAgentV2.Models.Scripts;
 
 namespace SysAgentV2.Data
 {
-    public class SysDbContext: DbContext
+    public class SysDbContext:  DbContext, ISysDbContext
     {
         public SysDbContext(DbContextOptions<SysDbContext> options): base(options) { }
         public DbSet<CollectMetrics> CollectMetrics { get; set; }

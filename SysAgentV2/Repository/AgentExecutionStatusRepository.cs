@@ -9,9 +9,9 @@ namespace SysAgentV2.Repository
 {
     public class AgentExecutionStatusRepository : IAgentExecutionStatusRepository
     {
-        private readonly SysDbContext _context;
+        private readonly ISysDbContext _context;
 
-        public AgentExecutionStatusRepository(SysDbContext context)
+        public AgentExecutionStatusRepository(ISysDbContext context)
         {
             _context = context;
         }

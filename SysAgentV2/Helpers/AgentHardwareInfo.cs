@@ -64,7 +64,6 @@ namespace SysAgentV2.Helpers
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

@@ -22,4 +22,8 @@
     <ProjectReference Include="..\SysAgentV2\SysAgentV2.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Worker\" />
+  </ItemGroup>
+
 </Project>

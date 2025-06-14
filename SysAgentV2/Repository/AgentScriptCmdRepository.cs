@@ -8,8 +8,8 @@ namespace SysAgentV2.Repository
 {
     public class ScriptCmdRepository : IScriptCmdRepository
     {
-        private readonly SysDbContext _context;
-        public ScriptCmdRepository(SysDbContext context)
+        private readonly ISysDbContext _context;
+        public ScriptCmdRepository(ISysDbContext context)
         {
             _context = context;
         }

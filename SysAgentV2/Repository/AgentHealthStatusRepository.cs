@@ -6,9 +6,9 @@ namespace SysAgentV2.Repository
 {
     public class AgentHealthStatusRepository : IAgentHealthStatusRepository
     {
-        private readonly SysDbContext _dbContext;
+        private readonly ISysDbContext _dbContext;
 
-        public AgentHealthStatusRepository(SysDbContext dbContext)
+        public AgentHealthStatusRepository(ISysDbContext dbContext)
         {
             _dbContext = dbContext;
         }
