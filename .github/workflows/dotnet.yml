@@ -1,0 +1,33 @@
+name: Coverage Test Report
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  run-coverage:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Instala .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restaura dependências
+      run: dotnet restore
+
+    - name: Executa script de cobertura
+      run: ./SysAgentUnitTest/GenerateCoverageTest.bat
+      shell: cmd
+
+    - name: Publica relatório como artefato
+      uses: actions/upload-artifact@v4
+      with:
+        name: cobertura
+        path: SysAgentUnitTest/coveragereport
