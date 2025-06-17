@@ -1,8 +1,10 @@
 ﻿
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
 namespace SysAgentV2.Models.Infos
 {
+    [ExcludeFromCodeCoverage]
     public class Process
     {
         public string Name { get; set; }

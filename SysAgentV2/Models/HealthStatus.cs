@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Models
 {
+    [ExcludeFromCodeCoverage]
     [Table("t_health_statust")]
     public class HealthStatus
     {

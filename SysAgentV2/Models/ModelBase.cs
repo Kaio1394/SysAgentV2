@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Models
 {
+    [ExcludeFromCodeCoverage]
     public class ModelBase
     {
         [Key]

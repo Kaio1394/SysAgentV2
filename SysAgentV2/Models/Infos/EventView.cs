@@ -1,5 +1,8 @@
-﻿namespace SysAgentV2.Models.Infos
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace SysAgentV2.Models.Infos
 {
+    [ExcludeFromCodeCoverage]
     public class EventView
     {
         public string EntryType { get; set; }

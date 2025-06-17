@@ -2,9 +2,11 @@
 using SysAgentV2.Models;
 using SysAgentV2.Models.Schedulling;
 using SysAgentV2.Models.Scripts;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Data
 {
+    [ExcludeFromCodeCoverage]
     public class SysDbContext:  DbContext, ISysDbContext
     {
         public SysDbContext(DbContextOptions<SysDbContext> options): base(options) { }

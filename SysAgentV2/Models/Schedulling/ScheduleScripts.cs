@@ -2,9 +2,11 @@
 using SysAgentV2.Models.Scripts;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Models.Schedulling
 {
+    [ExcludeFromCodeCoverage]
     [Table("t_schedule_scripts_cmd")]
     public class ScheduleScripts : ModelBase
     {

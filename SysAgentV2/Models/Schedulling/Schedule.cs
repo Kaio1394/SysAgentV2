@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SysAgentV2.Models.Schedulling
 {
+    [ExcludeFromCodeCoverage]
     [Table("t_schedules")]
     [Index(nameof(TagSchedule), IsUnique = true)]
     public class Schedule : ModelBase

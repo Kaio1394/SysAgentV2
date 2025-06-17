@@ -3,13 +3,20 @@ using SysAgentV2.Helpers.Interfaces;
 using SysAgentV2.Models.Infos;
 using System.Collections.Specialized;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Management;
 using System.ServiceProcess;
 
 namespace SysAgentV2.Helpers
 {
+    [ExcludeFromCodeCoverage]
     public class AgentHardwareInfo : IAgentHardwareInfo
     {
+        private readonly IHardwareInfo _hardwareInfo;
+        public AgentHardwareInfo(IHardwareInfo hardwareInfo)
+        {
+            _hardwareInfo = hardwareInfo;
+        }
         public int GetQtyCore()
         {
             return Environment.ProcessorCount;
@@ -18,10 +25,9 @@ namespace SysAgentV2.Helpers
         {
             try
             {
-                var hardwareInfo = new HardwareInfo();
-                hardwareInfo.RefreshCPUList();
+                _hardwareInfo.RefreshCPUList();
 
-                var cpu = hardwareInfo.CpuList.FirstOrDefault();
+                var cpu = _hardwareInfo.CpuList.FirstOrDefault();
                 return cpu.MaxClockSpeed;
             }
             catch (Exception)
